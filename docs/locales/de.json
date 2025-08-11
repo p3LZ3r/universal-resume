@@ -66,24 +66,27 @@
             {
                 "category": "Business Development",
                 "level": "Expert Level",
-                "description": "Strategic planning, partnership development, market analysis, and entrepreneurial leadership with focus on agricultural technology and digital marketplaces.",
+                "Beschreibung": "End-to-End-Geschäftsskalierung vom Startup bis zum siebenstelligen Umsatz mit Expertise in Sporttechnologie, Lieferkettenoptimierung und internationaler Marktentwicklung",
                 "tags": [
-                    "Strategic Planning",
-                    "Partnership Development",
-                    "Market Analysis",
-                    "AgTech"
+                    "Strategische Planung & Ausführung",
+                    "Lieferkettenmanagement",
+                    "Full-Stack Business Development",
+                    "Sport-Technologie-Innovation",
+                    "Internationale Logistik und Expansion",
+                    "Funktionsübergreifende Teamführung",
+                    "DevOps & Technischer Betrieb",
+                    "Kundenbeziehungen & Key Account Management"
                 ]
             },
             {
-                "category": "Zusätzliche Qualifikationen",
+                "Kategorie": "Zusätzliche Qualifikationen",
                 "tags": [
-                    "Project Management",
-                    "Digital Marketing",
-                    "Product Development",
-                    "Team Leadership",
-                    "Innovation Management",
-                    "German",
-                    "English"
+                    "UX/UI Design",
+                    "Digitales Marketing",
+                    "Design Engineering",
+                    "Buchaltung",
+                    "Deutsch",
+                    "Englisch"
                 ]
             }
         ]
