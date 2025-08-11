@@ -448,18 +448,77 @@
         // Clear existing content
         container.innerHTML = '';
 
-        CONFIG.supportedLangs.forEach(lang => {
+        CONFIG.supportedLangs.forEach((lang, index) => {
             const button = document.createElement('button');
             button.textContent = lang.toUpperCase();
-            button.className = `lang-btn ${currentLang === lang ? 'active' : ''}`;
+
+            // Base Tailwind classes for all buttons
+            const baseClasses = [
+                'px-3', 'py-2', 'text-sm', 'font-medium', 'transition-all', 'duration-200',
+                'border', 'focus:outline-none', 'focus:ring-2', 'focus:ring-gray-500',
+                'focus:ring-offset-1', 'cursor-pointer'
+            ];
+
+            // Conditional classes for button position (first/middle/last)
+            if (CONFIG.supportedLangs.length === 1) {
+                baseClasses.push('rounded-md');
+            } else if (index === 0) {
+                baseClasses.push('rounded-l-md', 'border-r-0');
+            } else if (index === CONFIG.supportedLangs.length - 1) {
+                baseClasses.push('rounded-r-md');
+            } else {
+                baseClasses.push('border-r-0');
+            }
+
+            // Active/inactive state classes
+            const isActive = currentLang === lang;
+            if (isActive) {
+                baseClasses.push(
+                    'bg-gray-700', 'text-white', 'border-gray-700',
+                    'hover:bg-gray-750', 'hover:border-gray-750'
+                );
+            } else {
+                baseClasses.push(
+                    'bg-white', 'text-gray-650', 'border-gray-300',
+                    'hover:bg-gray-50', 'hover:border-gray-400', 'hover:text-gray-700'
+                );
+            }
+
+            button.className = baseClasses.join(' ');
             button.setAttribute('type', 'button');
             button.setAttribute('aria-label', `Switch to ${lang.toUpperCase()}`);
+            button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
 
             button.addEventListener('click', () => {
                 setLang(lang);
-                // Update active states
-                container.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+                // Update active states for all buttons
+                container.querySelectorAll('button').forEach((btn, btnIndex) => {
+                    const btnLang = CONFIG.supportedLangs[btnIndex];
+                    const btnIsActive = btnLang === lang;
+
+                    // Remove old state classes
+                    btn.classList.remove(
+                        'bg-gray-700', 'text-white', 'border-gray-700',
+                        'hover:bg-gray-750', 'hover:border-gray-750',
+                        'bg-white', 'text-gray-650', 'border-gray-300',
+                        'hover:bg-gray-50', 'hover:border-gray-400', 'hover:text-gray-700'
+                    );
+
+                    // Add new state classes
+                    if (btnIsActive) {
+                        btn.classList.add(
+                            'bg-gray-700', 'text-white', 'border-gray-700',
+                            'hover:bg-gray-750', 'hover:border-gray-750'
+                        );
+                        btn.setAttribute('aria-pressed', 'true');
+                    } else {
+                        btn.classList.add(
+                            'bg-white', 'text-gray-650', 'border-gray-300',
+                            'hover:bg-gray-50', 'hover:border-gray-400', 'hover:text-gray-700'
+                        );
+                        btn.setAttribute('aria-pressed', 'false');
+                    }
+                });
             });
 
             container.appendChild(button);
