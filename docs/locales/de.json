@@ -1,0 +1,109 @@
+{
+    "meta": {
+        "title": "Torsten Linnecke — Resume",
+        "description": "Unternehmer und COO",
+        "keywords": "resume,cv,Torsten Linnecke",
+        "author": "Torsten Linnecke"
+    },
+    "header": {
+        "name": "Torsten Linnecke",
+        "initials": "TL"
+    },
+    "about": {
+        "title": "ÜBER MICH",
+        "company": "Design/Code - Torsten Linnecke",
+        "period": "Seit 2014",
+        "description": "Gestaltung und Umsetzung digitaler Markenauftritte, die Konvertieren, für lokale und nationale Champions."
+    },
+    "experience": {
+        "title": "ERFAHRUNG",
+        "positions": [
+            {
+                "company": "BM Sports Technology GmbH",
+                "period": "Mai 2017 – Juli 2025",
+                "position": "Chief Operating Officer",
+                "description": "Leitung umfassender operativer und strategischer Entwicklungsinitiativen, die das Unternehmen zu einem Top-Player auf dem Sporttechnologiemarkt machten, dessen Produkte von Athleten auf der ganzen Welt tagtäglich genutzt werden."
+            }
+        ]
+    },
+    "education": {
+        "title": "AUSBILDUNG",
+        "degrees": [
+            {
+                "institution": "Otto-von-Guericke-Universität Magdeburg",
+                "period": "2014 – 2017",
+                "degree": "Master of Science in Wirtschaftsingenieurwesen für Maschinenbau",
+                "description": "Vertiefung in Produktionstechnik; zum Wahrnehmen einer Unternehmensgründung während des Schreibens der Masterarbeit abgebrochen"
+            },
+            {
+                "institution": "Otto-von-Guericke-Universität Magdeburg",
+                "period": "2009 – 2014",
+                "degree": "Bachelor of Science in Wirtschaftsingenieurwesen für Maschinenbau",
+                "description": "Vertiefung in Produktionstechnik & Ressourceneffizienz und Nachhaltigkeit"
+            }
+        ]
+    },
+    "projects": {
+        "title": "PROJEKTE",
+        "items": [
+            {
+                "name": "Kickstarter Kampagne",
+                "period": "2018",
+                "link": "Link",
+                "description": "Planung, Gestaltung und Umsetzung einer erfolgreich finanzierten Kickstarter Kampagne als Growth Hack für eine Early Stage Startup."
+            },
+            {
+                "name": "Agoria - der digitale Marktplatz für landwirtschaftliche Betriebsmittel",
+                "period": "2016 – 2017",
+                "type": "AgTech Platform",
+                "description": "Gründung und Entwicklung eines digitalen Marktplatzes für landwirtschaftliche Produkte, der Landwirte mit Lieferanten durch innovative Technologielösungen verbindet."
+            }
+        ]
+    },
+    "qualifications": {
+        "title": "QUALIFIKATIONEN",
+        "skills": [
+            {
+                "category": "Business Development",
+                "level": "Expert Level",
+                "description": "Strategic planning, partnership development, market analysis, and entrepreneurial leadership with focus on agricultural technology and digital marketplaces.",
+                "tags": [
+                    "Strategic Planning",
+                    "Partnership Development",
+                    "Market Analysis",
+                    "AgTech"
+                ]
+            },
+            {
+                "category": "Zusätzliche Qualifikationen",
+                "tags": [
+                    "Project Management",
+                    "Digital Marketing",
+                    "Product Development",
+                    "Team Leadership",
+                    "Innovation Management",
+                    "German",
+                    "English"
+                ]
+            }
+        ]
+    },
+    "contact": {
+        "title": "KONTAKT",
+        "items": [
+            {
+                "type": "linkedin",
+                "label": "LinkedIn",
+                "url": "//linkedin.com/in/torsten-linnecke"
+            },
+            {
+                "type": "location",
+                "label": "39112 Magdeburg, Germany"
+            },
+            {
+                "type": "email",
+                "label": "tlinnecke@gmail.com"
+            }
+        ]
+    }
+}
