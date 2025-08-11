@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://torsten-linnecke.github.io/universal-resume/sitemap.xml
