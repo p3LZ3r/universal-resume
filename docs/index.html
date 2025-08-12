@@ -19,7 +19,10 @@
   <meta property="og:url" content="https://cv.torsten-linnecke.de/">
   <meta property="og:title" content="Torsten Linnecke — Resume" data-i18n-attr="content" data-i18n="meta.title">
   <meta property="og:description" content="Unternehmer und COO" data-i18n-attr="content" data-i18n="meta.description">
-  <meta property="og:image" content="https://cv.torsten-linnecke.de/og-image.png">
+  <meta property="og:image" content="https://cv.torsten-linnecke.de/images/headshot.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:image:type" content="image/png">
   <meta property="profile:first_name" content="Torsten">
   <meta property="profile:last_name" content="Linnecke">
 
@@ -29,17 +32,18 @@
   <meta property="twitter:title" content="Torsten Linnecke — Resume" data-i18n-attr="content" data-i18n="meta.title">
   <meta property="twitter:description" content="Unternehmer und COO" data-i18n-attr="content"
     data-i18n="meta.description">
-  <meta property="twitter:image" content="https://cv.torsten-linnecke.de/og-image.png">
+  <meta property="twitter:image" content="https://cv.torsten-linnecke.de/images/headshot.png">
 
   <!-- Hreflang for multilingual SEO -->
   <link rel="alternate" hreflang="de" href="https://cv.torsten-linnecke.de/?lang=de">
   <link rel="alternate" hreflang="en" href="https://cv.torsten-linnecke.de/?lang=en">
   <link rel="alternate" hreflang="x-default" href="https://cv.torsten-linnecke.de/">
-  <!-- Preload critical resources -->
+  <!-- Preload critical resources - prioritize most commonly used fonts -->
   <link rel="preload" href="./fonts/FiraGO-Regular.latin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/FiraGO-Bold.latin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-  <link rel="preload" href="./fonts/FiraGO-Medium.latin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/FiraGO-SemiBold.latin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <!-- Load Medium and Bold on demand -->
+  <link rel="preload" href="./fonts/FiraGO-Medium.latin.woff2" as="font" type="font/woff2" crossorigin="anonymous" media="print">
+  <link rel="preload" href="./fonts/FiraGO-Bold.latin.woff2" as="font" type="font/woff2" crossorigin="anonymous" media="print">
   <link rel="preload" href="./build.css" as="style">
   <link href="./build.css" rel="stylesheet">
   <title data-i18n="meta.title">Torsten Linnecke — Resume</title>
@@ -54,6 +58,7 @@
     "jobTitle": "Chief Operating Officer",
     "description": "Entrepreneur and COO with expertise in sports technology, business development, and strategic operations",
     "url": "https://cv.torsten-linnecke.de/",
+    "image": "https://cv.torsten-linnecke.de/images/headshot.png",
     "sameAs": [
       "https://linkedin.com/in/torsten-linnecke"
     ],
@@ -106,10 +111,8 @@
 
       <!-- Name -->
       <header class="flex items-center mb-8 md:mb-11">
-        <div
-          class="initials-container mr-5 text-base leading-none text-white bg-gray-700 font-medium print:bg-black px-3"
-          style="padding-bottom: 0.6875rem; padding-top: 0.6875rem; /*11px*/">
-          <div class="initial text-center" style="padding-bottom: 0.1875rem; /*3px*/">T</div>
+        <div class="initials-container mr-5 text-base leading-none text-white bg-gray-700 font-medium print:bg-black px-3 py-2.5">
+          <div class="initial text-center pb-0.5">T</div>
           <div class="text-center initial">L</div>
         </div>
         <h1 class="text-2xl font-semibold text-gray-750 pb-px" data-i18n="header.name">
@@ -118,12 +121,14 @@
 
         <!-- Freelance Pill Tag -->
         <div class="ml-4 flex items-center print:hidden">
-          <div
+          <a
+            href="mailto:tlinnecke@gmail.com"
             class="inline-flex leading-none items-center px-2 py-0.5 bg-gray-200 text-gray-700 text-xs font-medium rounded-full cursor-pointer hover:bg-gray-300 transition-colors"
-            onclick="window.location.href='mailto:tlinnecke@gmail.com'" title="Verfügbar">
-            <span class="mr-1 mb-0.5 text-green-500 animate-pulse">●</span>
+            title="Verfügbar"
+            aria-label="Available for freelance work - Contact via email">
+            <span class="mr-1 mb-0.5 text-green-500 animate-pulse" aria-hidden="true">●</span>
             Verfügbar
-          </div>
+          </a>
         </div>
         <!-- Language Switcher -->
         <div class="ml-auto print:hidden">

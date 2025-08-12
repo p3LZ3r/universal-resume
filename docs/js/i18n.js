@@ -13,237 +13,22 @@
         paramName: 'lang'
     };
 
-    // Embedded translations to avoid CORS issues with file:/// protocol
+    // Minimal embedded translations as ultimate fallback only
     const EMBEDDED_TRANSLATIONS = {
         'en': {
-            "meta": {
-                "title": "Torsten Linnecke — Resume | COO & Entrepreneur",
-                "description": "Entrepreneur and COO with expertise in sports technology, business development, and strategic operations. Magdeburg, Germany.",
-                "keywords": "resume,cv,Torsten Linnecke,COO,sports technology,business development,entrepreneur,magdeburg,germany,strategic planning,operations management",
-                "author": "Torsten Linnecke"
-            },
-            "header": {
-                "name": "Torsten Linnecke",
-                "initials": "TL"
-            },
-            "about": {
-                "title": "ABOUT ME",
-                "company": "Design/Code - Torsten Linnecke",
-                "period": "Since 2014",
-                "description": "Design and implementation of digital brand experiences that convert, for local and national champions."
-            },
-            "experience": {
-                "title": "EXPERIENCE",
-                "positions": [
-                    {
-                        "company": "BM Sports Technology GmbH",
-                        "period": "May 2017 – July 2025",
-                        "position": "Chief Operating Officer",
-                        "description": "Led comprehensive operational and strategic development initiatives that made the company a top player in the sports technology market, whose products are used daily by athletes around the world."
-                    }
-                ]
-            },
-            "education": {
-                "title": "EDUCATION",
-                "degrees": [
-                    {
-                        "institution": "Otto-von-Guericke University Magdeburg",
-                        "period": "2014 – 2017",
-                        "degree": "Master of Science in Industrial Engineering for Mechanical Engineering",
-                        "description": "Specialization in Production Technology; discontinued to pursue entrepreneurial opportunities while writing master's thesis"
-                    },
-                    {
-                        "institution": "Otto-von-Guericke University Magdeburg",
-                        "period": "2009 – 2014",
-                        "degree": "Bachelor of Science in Industrial Engineering for Mechanical Engineering",
-                        "description": "Specialization in Production Technology & Resource Efficiency and Sustainability"
-                    }
-                ]
-            },
-            "projects": {
-                "title": "PROJECTS",
-                "items": [
-                    {
-                        "name": "Kickstarter Campaign",
-                        "period": "2018",
-                        "link": "Link",
-                        "description": "Planning, design and implementation of a successfully funded Kickstarter campaign as a growth hack for an early stage startup."
-                    },
-                    {
-                        "name": "Agoria - the digital marketplace for agricultural supplies",
-                        "period": "2016 – 2017",
-                        "type": "AgTech Platform",
-                        "description": "Founded and developed a digital marketplace for agricultural products that connects farmers with suppliers through innovative technology solutions."
-                    }
-                ]
-            },
-            "qualifications": {
-                "title": "QUALIFICATIONS",
-                "skills": [
-                    {
-                        "category": "Strategic Operations & Scale-Up Leadership",
-                        "level": "Expert Level",
-                        "description": "End-to-end business scaling from startup to seven-figure revenue with expertise in sports technology, supply chain optimization, and international market development.",
-                        "tags": [
-                            "Strategic Planning & Execution",
-                            "Supply Chain Management",
-                            "Full-Stack Business Development",
-                            "Sports Technology Innovation",
-                            "International Logistics & Expansion",
-                            "Cross-Functional Team Leadership",
-                            "DevOps & Technical Operations",
-                            "Customer Relations & Key Account Management"
-                        ]
-                    },
-                    {
-                        "category": "Additional Qualifications",
-                        "tags": [
-                            "UX/UI Design",
-                            "Digital Marketing",
-                            "Design Engineering",
-                            "Accounting",
-                            "German",
-                            "English"
-                        ]
-                    }
-                ]
-            },
-            "contact": {
-                "title": "CONTACT",
-                "items": [
-                    {
-                        "type": "linkedin",
-                        "label": "LinkedIn",
-                        "url": "//linkedin.com/in/torsten-linnecke"
-                    },
-                    {
-                        "type": "location",
-                        "label": "39112 Magdeburg, Germany"
-                    },
-                    {
-                        "type": "email",
-                        "label": "tlinnecke@gmail.com"
-                    }
-                ]
-            }
+            "meta": { "title": "Torsten Linnecke — Resume" },
+            "header": { "name": "Torsten Linnecke" }
         },
         'de': {
-            "meta": {
-                "title": "Torsten Linnecke — Lebenslauf | COO & Unternehmer",
-                "description": "Unternehmer und COO mit Expertise in Sporttechnologie, Geschäftsentwicklung und strategischen Operationen. Magdeburg, Deutschland.",
-                "keywords": "resume,cv,lebenslauf,Torsten Linnecke,COO,sporttechnologie,geschäftsentwicklung,unternehmer,magdeburg,deutschland,strategic planning,business development",
-                "author": "Torsten Linnecke"
-            },
-            "header": {
-                "name": "Torsten Linnecke",
-                "initials": "TL"
-            },
-            "about": {
-                "title": "ÜBER MICH",
-                "company": "Design/Code - Torsten Linnecke",
-                "period": "Seit 2014",
-                "description": "Gestaltung und Umsetzung digitaler Markenauftritte, die Konvertieren, für lokale und nationale Champions."
-            },
-            "experience": {
-                "title": "ERFAHRUNG",
-                "positions": [
-                    {
-                        "company": "BM Sports Technology GmbH",
-                        "period": "Mai 2017 – Juli 2025",
-                        "position": "Chief Operating Officer",
-                        "description": "Leitung umfassender operativer und strategischer Entwicklungsinitiativen, die das Unternehmen zu einem Top-Player auf dem Sporttechnologiemarkt machten, dessen Produkte von Athleten auf der ganzen Welt tagtäglich genutzt werden."
-                    }
-                ]
-            },
-            "education": {
-                "title": "AUSBILDUNG",
-                "degrees": [
-                    {
-                        "institution": "Otto-von-Guericke-Universität Magdeburg",
-                        "period": "2014 – 2017",
-                        "degree": "Master of Science in Wirtschaftsingenieurwesen für Maschinenbau",
-                        "description": "Vertiefung in Produktionstechnik; zum Wahrnehmen einer Unternehmensgründung während des Schreibens der Masterarbeit abgebrochen"
-                    },
-                    {
-                        "institution": "Otto-von-Guericke-Universität Magdeburg",
-                        "period": "2009 – 2014",
-                        "degree": "Bachelor of Science in Wirtschaftsingenieurwesen für Maschinenbau",
-                        "description": "Vertiefung in Produktionstechnik & Ressourceneffizienz und Nachhaltigkeit"
-                    }
-                ]
-            },
-            "projects": {
-                "title": "PROJEKTE",
-                "items": [
-                    {
-                        "name": "Kickstarter Kampagne",
-                        "period": "2018",
-                        "link": "Link",
-                        "description": "Planung, Gestaltung und Umsetzung einer erfolgreich finanzierten Kickstarter Kampagne als Growth Hack für eine Early Stage Startup."
-                    },
-                    {
-                        "name": "Agoria - der digitale Marktplatz für landwirtschaftliche Betriebsmittel",
-                        "period": "2016 – 2017",
-                        "type": "AgTech Platform",
-                        "description": "Gründung und Entwicklung eines digitalen Marktplatzes für landwirtschaftliche Produkte, der Landwirte mit Lieferanten durch innovative Technologielösungen verbindet."
-                    }
-                ]
-            },
-            "qualifications": {
-                "title": "QUALIFIKATIONEN",
-                "skills": [
-                    {
-                        "category": "Strategic Operations & Scale-Up Leadership",
-                        "level": "Experten Level",
-                        "description": "End-to-End-Geschäftsskalierung vom Startup bis zum siebenstelligen Umsatz mit Expertise in Sporttechnologie, Lieferkettenoptimierung und internationaler Marktentwicklung",
-                        "tags": [
-                            "Strategische Planung & Ausführung",
-                            "Lieferkettenmanagement",
-                            "Full-Stack Business Development",
-                            "Sport-Technologie-Innovation",
-                            "Internationale Logistik und Expansion",
-                            "Funktionsübergreifende Teamführung",
-                            "DevOps & Technischer Betrieb",
-                            "Kundenbeziehungen & Key Account Management"
-                        ]
-                    },
-                    {
-                        "category": "Zusätzliche Qualifikationen",
-                        "tags": [
-                            "UX/UI Design",
-                            "Digitales Marketing",
-                            "Design Engineering",
-                            "Buchaltung",
-                            "Deutsch",
-                            "Englisch"
-                        ]
-                    }
-                ]
-            },
-            "contact": {
-                "title": "KONTAKT",
-                "items": [
-                    {
-                        "type": "linkedin",
-                        "label": "LinkedIn",
-                        "url": "//linkedin.com/in/torsten-linnecke"
-                    },
-                    {
-                        "type": "location",
-                        "label": "39112 Magdeburg, Germany"
-                    },
-                    {
-                        "type": "email",
-                        "label": "tlinnecke@gmail.com"
-                    }
-                ]
-            }
+            "meta": { "title": "Torsten Linnecke — Lebenslauf" },
+            "header": { "name": "Torsten Linnecke" }
         }
     };
 
     // State
     let currentLang = CONFIG.defaultLang;
     let translations = {};
+    let cachedElements = null; // Cache DOM elements for better performance
 
     /**
      * Get language from URL parameter
@@ -295,52 +80,53 @@
     }
 
     /**
-     * Load translations for a specific language
-     * Always tries to fetch JSON files first, uses embedded as fallback only
+     * Load translations with streamlined fallback strategy
      */
     async function loadTranslations(lang) {
-        try {
-            // Always try to fetch from JSON files first
-            const response = await fetch(`${CONFIG.localesPath}${lang}.json?v=${Date.now()}`);
-            if (response.ok) {
-                translations = await response.json();
-                console.info(`Loaded ${lang}.json translations successfully`);
-                return;
-            }
-            throw new Error(`Failed to load ${lang}.json - status: ${response.status}`);
-        } catch (error) {
-            console.warn(`Error loading translations from JSON for '${lang}':`, error);
+        const fallbackChain = [
+            () => loadFromJSON(lang),
+            () => loadFromJSON(CONFIG.defaultLang),
+            () => useEmbeddedTranslations(CONFIG.defaultLang)
+        ];
 
-            // Fallback: try embedded translations
-            if (EMBEDDED_TRANSLATIONS[lang]) {
-                console.warn(`Using embedded ${lang} translations as fallback`);
-                translations = EMBEDDED_TRANSLATIONS[lang];
-                return;
-            }
-
-            // Second fallback: try default language JSON
-            if (lang !== CONFIG.defaultLang) {
-                try {
-                    const fallbackResponse = await fetch(`${CONFIG.localesPath}${CONFIG.defaultLang}.json?v=${Date.now()}`);
-                    if (fallbackResponse.ok) {
-                        translations = await fallbackResponse.json();
-                        console.info(`Using ${CONFIG.defaultLang}.json as fallback`);
-                        return;
-                    }
-                } catch (fallbackError) {
-                    console.error('Failed to load fallback JSON:', fallbackError);
+        for (const loadStrategy of fallbackChain) {
+            try {
+                const result = await loadStrategy();
+                if (result) {
+                    translations = result;
+                    return;
                 }
-            }
-
-            // Ultimate fallback: use embedded default
-            if (EMBEDDED_TRANSLATIONS[CONFIG.defaultLang]) {
-                console.warn(`Using embedded ${CONFIG.defaultLang} translations as ultimate fallback`);
-                translations = EMBEDDED_TRANSLATIONS[CONFIG.defaultLang];
-            } else {
-                console.error('No translations available');
-                translations = {};
+            } catch (error) {
+                console.warn(`Translation loading strategy failed:`, error);
             }
         }
+
+        console.error('All translation loading strategies failed');
+        translations = {};
+    }
+
+    /**
+     * Load translations from JSON file
+     */
+    async function loadFromJSON(lang) {
+        const response = await fetch(`${CONFIG.localesPath}${lang}.json?v=${Date.now()}`);
+        if (!response.ok) {
+            throw new Error(`Failed to load ${lang}.json - status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.info(`Loaded ${lang}.json translations successfully`);
+        return data;
+    }
+
+    /**
+     * Use embedded translations as fallback
+     */
+    function useEmbeddedTranslations(lang) {
+        if (EMBEDDED_TRANSLATIONS[lang]) {
+            console.warn(`Using minimal embedded ${lang} translations as ultimate fallback`);
+            return EMBEDDED_TRANSLATIONS[lang];
+        }
+        return null;
     }
 
     /**
@@ -367,13 +153,31 @@
     }
 
     /**
+     * Cache DOM elements for better performance
+     */
+    function cacheElements() {
+        if (cachedElements) return cachedElements;
+
+        cachedElements = {
+            textElements: document.querySelectorAll('[data-i18n]'),
+            htmlElements: document.querySelectorAll('[data-i18n-html]'),
+            placeholderElements: document.querySelectorAll('[data-i18n-placeholder]'),
+            titleElements: document.querySelectorAll('[data-i18n-title]'),
+            metaElements: document.querySelectorAll('[data-i18n-attr][data-i18n]'),
+            legacyDescMeta: document.querySelector('meta[name="description"]:not([data-i18n-attr])')
+        };
+
+        return cachedElements;
+    }
+
+    /**
      * Update all text elements on the page
      */
     function updatePageText() {
-        // Update elements with data-i18n attribute
-        const elements = document.querySelectorAll('[data-i18n]');
+        const elements = cacheElements();
 
-        elements.forEach(element => {
+        // Update elements with data-i18n attribute
+        elements.textElements.forEach(element => {
             const key = element.getAttribute('data-i18n');
             const translation = t(key);
 
@@ -383,9 +187,7 @@
         });
 
         // Update elements with data-i18n-html attribute (for HTML content)
-        const htmlElements = document.querySelectorAll('[data-i18n-html]');
-
-        htmlElements.forEach(element => {
+        elements.htmlElements.forEach(element => {
             const key = element.getAttribute('data-i18n-html');
             const translation = t(key);
 
@@ -395,8 +197,7 @@
         });
 
         // Update placeholder attributes
-        const placeholderElements = document.querySelectorAll('[data-i18n-placeholder]');
-        placeholderElements.forEach(element => {
+        elements.placeholderElements.forEach(element => {
             const key = element.getAttribute('data-i18n-placeholder');
             const translation = t(key);
 
@@ -406,8 +207,7 @@
         });
 
         // Update title attributes
-        const titleElements = document.querySelectorAll('[data-i18n-title]');
-        titleElements.forEach(element => {
+        elements.titleElements.forEach(element => {
             const key = element.getAttribute('data-i18n-title');
             const translation = t(key);
 
@@ -424,8 +224,7 @@
         }
 
         // Update meta tags with data-i18n-attr attribute
-        const metaElements = document.querySelectorAll('[data-i18n-attr][data-i18n]');
-        metaElements.forEach(element => {
+        elements.metaElements.forEach(element => {
             const key = element.getAttribute('data-i18n');
             const attr = element.getAttribute('data-i18n-attr');
             const translation = t(key);
@@ -436,13 +235,19 @@
         });
         
         // Legacy: Update meta description for backward compatibility
-        const descMeta = document.querySelector('meta[name="description"]');
-        if (descMeta && !descMeta.hasAttribute('data-i18n-attr')) {
+        if (elements.legacyDescMeta) {
             const descTranslation = t('meta.description');
             if (descTranslation && descTranslation !== 'meta.description') {
-                descMeta.setAttribute('content', descTranslation);
+                elements.legacyDescMeta.setAttribute('content', descTranslation);
             }
         }
+    }
+
+    /**
+     * Clear cached elements when DOM changes
+     */
+    function clearElementCache() {
+        cachedElements = null;
     }
 
     /**
@@ -571,6 +376,7 @@
         hasTranslation,
         updatePageText,
         createLanguageSwitcher,
+        clearElementCache,
         init
     };
 
