@@ -1,9 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://torsten-linnecke.github.io/universal-resume/</loc>
-    <lastmod>2025-08-11</lastmod>
+    <loc>https://cv.torsten-linnecke.de/</loc>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://cv.torsten-linnecke.de/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cv.torsten-linnecke.de/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cv.torsten-linnecke.de/"/>
+  </url>
+  <url>
+    <loc>https://cv.torsten-linnecke.de/?lang=de</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://cv.torsten-linnecke.de/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cv.torsten-linnecke.de/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cv.torsten-linnecke.de/"/>
+  </url>
+  <url>
+    <loc>https://cv.torsten-linnecke.de/?lang=en</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://cv.torsten-linnecke.de/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cv.torsten-linnecke.de/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://cv.torsten-linnecke.de/"/>
   </url>
 </urlset>

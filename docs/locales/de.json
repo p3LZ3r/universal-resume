@@ -1,8 +1,8 @@
 {
     "meta": {
-        "title": "Torsten Linnecke — Resume",
-        "description": "Unternehmer und COO",
-        "keywords": "resume,cv,Torsten Linnecke",
+        "title": "Torsten Linnecke — Lebenslauf | COO & Unternehmer",
+        "description": "Unternehmer und COO mit Expertise in Sporttechnologie, Geschäftsentwicklung und strategischen Operationen. Magdeburg, Deutschland.",
+        "keywords": "resume,cv,lebenslauf,Torsten Linnecke,COO,sporttechnologie,geschäftsentwicklung,unternehmer,magdeburg,deutschland,strategic planning,business development",
         "author": "Torsten Linnecke"
     },
     "header": {
@@ -64,9 +64,9 @@
         "title": "QUALIFIKATIONEN",
         "skills": [
             {
-                "category": "Business Development",
-                "level": "Expert Level",
-                "Beschreibung": "End-to-End-Geschäftsskalierung vom Startup bis zum siebenstelligen Umsatz mit Expertise in Sporttechnologie, Lieferkettenoptimierung und internationaler Marktentwicklung",
+                "category": "Strategic Operations & Scale-Up Leadership",
+                "level": "Experten Level",
+                "description": "End-to-End-Geschäftsskalierung vom Startup bis zum siebenstelligen Umsatz mit Expertise in Sporttechnologie, Lieferkettenoptimierung und internationaler Marktentwicklung",
                 "tags": [
                     "Strategische Planung & Ausführung",
                     "Lieferkettenmanagement",
@@ -79,7 +79,7 @@
                 ]
             },
             {
-                "Kategorie": "Zusätzliche Qualifikationen",
+                "category": "Zusätzliche Qualifikationen",
                 "tags": [
                     "UX/UI Design",
                     "Digitales Marketing",

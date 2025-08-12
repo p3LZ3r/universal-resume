@@ -1,713 +1,444 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de" data-i18n-title="meta.title">
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Unternehmer und COO" data-i18n-attr="content" data-i18n="meta.description">
+  <meta name="keywords"
+    content="resume,cv,Torsten Linnecke,COO,sports technology,business development,entrepreneur,Magdeburg,Germany"
+    data-i18n-attr="content" data-i18n="meta.keywords">
+  <meta name="author" content="Torsten Linnecke" data-i18n-attr="content" data-i18n="meta.author">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <!-- SEO Meta Tags -->
-  <title>Torsten Linnecke - Strategic Operations & Scale-Up Leadership | Magdeburg</title>
-  <meta name="description"
-    content="Torsten Linnecke drives strategic operations & scale-up leadership in Magdeburg. Expert in operational excellence, growth strategy, and business transformation.">
-  <meta name="keywords"
-    content="Strategic Operations, Scale-Up Leadership, COO, Business Development, Operational Excellence, Growth Strategy, Business Transformation, Magdeburg, Germany, Sports Technology, AgTech">
-  <meta name="author" content="Torsten Linnecke">
-  <meta name="robots" content="index, follow">
-
-  <!-- Open Graph Meta Tags -->
-  <meta property="og:title" content="Torsten Linnecke - Strategic Operations & Scale-Up Leadership">
-  <meta property="og:description"
-    content="Expert in operational excellence, growth strategy, and business transformation with proven track record in sports technology and digital marketplaces.">
-  <meta property="og:type" content="profile">
-  <meta property="og:url" content="https://torsten-linnecke.github.io/universal-resume/">
-  <meta property="og:image" content="https://torsten-linnecke.github.io/universal-resume/images/headshot.webp">
-  <meta property="og:locale" content="en_US">
-
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Torsten Linnecke - Strategic Operations & Scale-Up Leadership">
-  <meta name="twitter:description"
-    content="Expert in operational excellence, growth strategy, and business transformation.">
-  <meta name="twitter:image" content="https://torsten-linnecke.github.io/universal-resume/images/headshot.webp">
-
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://torsten-linnecke.github.io/universal-resume/">
+  <link rel="canonical" href="https://cv.torsten-linnecke.de/">
 
-  <!-- DNS Prefetch and Preconnect for Performance -->
-  <link rel="dns-prefetch" href="//fonts.gstatic.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://cv.torsten-linnecke.de/">
+  <meta property="og:title" content="Torsten Linnecke — Resume" data-i18n-attr="content" data-i18n="meta.title">
+  <meta property="og:description" content="Unternehmer und COO" data-i18n-attr="content" data-i18n="meta.description">
+  <meta property="og:image" content="https://cv.torsten-linnecke.de/og-image.png">
+  <meta property="profile:first_name" content="Torsten">
+  <meta property="profile:last_name" content="Linnecke">
 
-  <!-- Font Preloads for Performance -->
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://cv.torsten-linnecke.de/">
+  <meta property="twitter:title" content="Torsten Linnecke — Resume" data-i18n-attr="content" data-i18n="meta.title">
+  <meta property="twitter:description" content="Unternehmer und COO" data-i18n-attr="content"
+    data-i18n="meta.description">
+  <meta property="twitter:image" content="https://cv.torsten-linnecke.de/og-image.png">
+
+  <!-- Hreflang for multilingual SEO -->
+  <link rel="alternate" hreflang="de" href="https://cv.torsten-linnecke.de/?lang=de">
+  <link rel="alternate" hreflang="en" href="https://cv.torsten-linnecke.de/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://cv.torsten-linnecke.de/">
+  <!-- Preload critical resources -->
   <link rel="preload" href="./fonts/FiraGO-Regular.latin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/FiraGO-Bold.latin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/FiraGO-Medium.latin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="./fonts/FiraGO-SemiBold.latin.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="./build.css" as="style">
+  <link href="./build.css" rel="stylesheet">
+  <title data-i18n="meta.title">Torsten Linnecke — Resume</title>
+  <script src="./js/i18n.js"></script>
 
-  <!-- Image Preload for Above-the-fold Content -->
-  <link rel="preload" href="./images/headshot.webp" as="image" type="image/webp">
-
-  <!-- JSON-LD Schema Markup -->
+  <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Torsten Linnecke",
-    "jobTitle": "Strategic Operations & Scale-Up Leadership",
-    "description": "Expert in operational excellence, growth strategy, and business transformation",
-    "url": "https://torsten-linnecke.github.io/universal-resume/",
+    "jobTitle": "Chief Operating Officer",
+    "description": "Entrepreneur and COO with expertise in sports technology, business development, and strategic operations",
+    "url": "https://cv.torsten-linnecke.de/",
     "sameAs": [
-      "https://linkedin.com/in/torsten-linnecke",
-      "https://github.com/p3LZ3r"
+      "https://linkedin.com/in/torsten-linnecke"
     ],
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Magdeburg",
-      "addressCountry": "Germany"
+      "addressCountry": "DE",
+      "postalCode": "39112"
     },
     "email": "tlinnecke@gmail.com",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "BM Sports Technology GmbH"
-    },
     "alumniOf": [
       {
         "@type": "EducationalOrganization",
-        "name": "Otto-von-Guericke-Universität Magdeburg"
+        "name": "Otto-von-Guericke-Universität Magdeburg",
+        "url": "https://www.ovgu.de/"
+      }
+    ],
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "BM Sports Technology GmbH",
+        "description": "Sports technology company developing innovative solutions for athletes worldwide",
+        "foundingDate": "2017"
       }
     ],
     "knowsAbout": [
-      "Strategic Operations",
-      "Scale-Up Leadership", 
-      "Business Development",
-      "Operational Excellence",
-      "Growth Strategy",
+      "Strategic Planning",
+      "Business Development", 
       "Sports Technology",
-      "Agricultural Technology"
-    ]
+      "Supply Chain Management",
+      "Team Leadership",
+      "Digital Marketing",
+      "Product Development",
+      "Operations Management"
+    ],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Chief Operating Officer",
+      "description": "Leading operational and strategic development initiatives in sports technology"
+    }
   }
   </script>
-
-  <!-- Embedded CSS for Performance -->
-  <style>
-    /* FiraGO Font Faces */
-    @font-face {
-      font-family: 'FiraGO';
-      font-style: normal;
-      font-weight: 400;
-      font-display: swap;
-      src: url('./fonts/FiraGO-Regular.latin.woff2') format('woff2');
-    }
-
-    @font-face {
-      font-family: 'FiraGO';
-      font-style: normal;
-      font-weight: 500;
-      font-display: swap;
-      src: url('./fonts/FiraGO-Medium.latin.woff2') format('woff2');
-    }
-
-    @font-face {
-      font-family: 'FiraGO';
-      font-style: normal;
-      font-weight: 600;
-      font-display: swap;
-      src: url('./fonts/FiraGO-SemiBold.latin.woff2') format('woff2');
-    }
-
-    @font-face {
-      font-family: 'FiraGO';
-      font-style: normal;
-      font-weight: 700;
-      font-display: swap;
-      src: url('./fonts/FiraGO-Bold.latin.woff2') format('woff2');
-    }
-
-    /* Reset and Base Styles */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --color-primary: #1f2937;
-      --color-secondary: #6b7280;
-      --color-accent: #059669;
-      --color-light: #f9fafb;
-      --color-white: #ffffff;
-      --font-family: 'FiraGO', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --max-width: 210mm;
-      --font-size-base: 16px;
-      --line-height-base: 1.6;
-    }
-
-    html {
-      font-size: var(--font-size-base);
-      line-height: var(--line-height-base);
-    }
-
-    body {
-      font-family: var(--font-family);
-      color: var(--color-primary);
-      background-color: var(--color-light);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    /* Layout */
-    .container {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      background-color: var(--color-white);
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-      min-height: 100vh;
-    }
-
-    .page {
-      padding: 3rem;
-    }
-
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      break-inside: avoid;
-    }
-
-    /* Typography */
-    h1 {
-      font-size: 2.25rem;
-      font-weight: 600;
-      color: var(--color-primary);
-      margin-bottom: 0.5rem;
-      line-height: 1.2;
-    }
-
-    h2 {
-      font-size: 0.875rem;
-      font-weight: 700;
-      color: var(--color-secondary);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid var(--color-accent);
-      padding-bottom: 0.5rem;
-    }
-
-    h3 {
-      font-size: 1.125rem;
-      font-weight: 600;
-      color: var(--color-primary);
-      margin-bottom: 0.25rem;
-    }
-
-    p {
-      margin-bottom: 1rem;
-      color: var(--color-primary);
-      line-height: 1.6;
-    }
-
-    .subtitle {
-      font-size: 1.125rem;
-      color: var(--color-secondary);
-      margin-bottom: 2rem;
-    }
-
-    /* Header */
-    .header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 3rem;
-      padding-bottom: 2rem;
-      border-bottom: 2px solid var(--color-light);
-    }
-
-    .headshot {
-      margin-right: 1.5rem;
-    }
-
-    .headshot-image {
-      width: 3.5rem;
-      height: 3.5rem;
-      border-radius: 0.375rem;
-      object-fit: cover;
-      display: block;
-    }
-
-    .initials {
-      width: 3.5rem;
-      height: 3.5rem;
-      background-color: var(--color-primary);
-      color: var(--color-white);
-      border-radius: 0.375rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      margin-right: 1.5rem;
-      font-size: 0.875rem;
-      line-height: 1;
-    }
-
-    .availability-pill {
-      margin-left: auto;
-      display: inline-flex;
-      align-items: center;
-      background-color: var(--color-light);
-      color: var(--color-secondary);
-      padding: 0.375rem 0.75rem;
-      border-radius: 9999px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-
-    .availability-pill:hover {
-      background-color: #e5e7eb;
-    }
-
-    .status-dot {
-      width: 0.5rem;
-      height: 0.5rem;
-      background-color: var(--color-accent);
-      border-radius: 50%;
-      margin-right: 0.5rem;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-
-      0%,
-      100% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0.5;
-      }
-    }
-
-    /* Sections */
-    .section {
-      margin-bottom: 2.5rem;
-      break-inside: avoid;
-    }
-
-    .experience-item,
-    .education-item,
-    .project-item {
-      margin-bottom: 2rem;
-      break-inside: avoid;
-    }
-
-    .item-header {
-      margin-bottom: 0.75rem;
-    }
-
-    .item-meta {
-      color: var(--color-secondary);
-      font-size: 0.875rem;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Skills */
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    .skill-tag {
-      background-color: var(--color-light);
-      color: var(--color-primary);
-      padding: 0.375rem 0.75rem;
-      border-radius: 0.375rem;
-      font-size: 0.875rem;
-      font-weight: 500;
-    }
-
-    /* Contact */
-    .contact-list {
-      list-style: none;
-    }
-
-    .contact-item {
-      margin-bottom: 0.75rem;
-      display: flex;
-      align-items: center;
-    }
-
-    .contact-link {
-      color: var(--color-primary);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .contact-link:hover {
-      color: var(--color-accent);
-    }
-
-    .external-link::after {
-      content: " ↗";
-      color: var(--color-secondary);
-      font-size: 0.875rem;
-    }
-
-    /* Print Styles */
-    @media print {
-      body {
-        background-color: var(--color-white);
-      }
-
-      .container {
-        box-shadow: none;
-        max-width: none;
-      }
-
-      .page {
-        padding: 1.5rem;
-      }
-
-      .availability-pill {
-        display: none;
-      }
-
-      .two-column {
-        column-count: 2;
-        column-gap: 2rem;
-        display: block;
-      }
-
-      .section {
-        break-inside: avoid;
-      }
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-      .page {
-        padding: 1.5rem;
-      }
-
-      .two-column {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .header {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-      }
-
-      .availability-pill {
-        margin-left: 0;
-        margin-top: 1rem;
-      }
-
-      h1 {
-        font-size: 1.875rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .page {
-        padding: 1rem;
-      }
-
-      h1 {
-        font-size: 1.5rem;
-      }
-
-      .skills-grid {
-        gap: 0.25rem;
-      }
-
-      .skill-tag {
-        font-size: 0.75rem;
-        padding: 0.25rem 0.5rem;
-      }
-    }
-  </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="page">
+  <main class="font-firago hyphens-manual">
 
-      <!-- Header -->
-      <header class="header">
-        <picture class="headshot">
-          <source srcset="./images/headshot.webp" type="image/webp">
-          <img src="./images/headshot.svg"
-            alt="Torsten Linnecke - Strategic Operations & Scale-Up Leadership professional headshot" width="56"
-            height="56" loading="eager" class="headshot-image">
-        </picture>
-        <div>
-          <h1>Torsten Linnecke</h1>
-          <p class="subtitle">Strategic Operations & Scale-Up Leadership</p>
+    <!-- Page -->
+    <div class="p-6 mx-auto page max-w-2xl print:max-w-a4 md:max-w-a4 md:h-a4 xsm:p-8 sm:p-9 md:p-16 bg-white">
+
+      <!-- Name -->
+      <header class="flex items-center mb-8 md:mb-11">
+        <div
+          class="initials-container mr-5 text-base leading-none text-white bg-gray-700 font-medium print:bg-black px-3"
+          style="padding-bottom: 0.6875rem; padding-top: 0.6875rem; /*11px*/">
+          <div class="initial text-center" style="padding-bottom: 0.1875rem; /*3px*/">T</div>
+          <div class="text-center initial">L</div>
         </div>
-        <div class="availability-pill" onclick="window.location.href='mailto:tlinnecke@gmail.com'"
-          title="Available for new opportunities">
-          <span class="status-dot"></span>
-          Available
+        <h1 class="text-2xl font-semibold text-gray-750 pb-px" data-i18n="header.name">
+          Torsten Linnecke
+        </h1>
+
+        <!-- Freelance Pill Tag -->
+        <div class="ml-4 flex items-center print:hidden">
+          <div
+            class="inline-flex leading-none items-center px-2 py-0.5 bg-gray-200 text-gray-700 text-xs font-medium rounded-full cursor-pointer hover:bg-gray-300 transition-colors"
+            onclick="window.location.href='mailto:tlinnecke@gmail.com'" title="Verfügbar">
+            <span class="mr-1 mb-0.5 text-green-500 animate-pulse">●</span>
+            Verfügbar
+          </div>
+        </div>
+        <!-- Language Switcher -->
+        <div class="ml-auto print:hidden">
+          <div id="language-switcher" class="flex"></div>
         </div>
       </header>
+      <!-- end Name -->
 
-      <main class="two-column">
+      <!-- Column -->
+      <div class="md:col-count-2 print:col-count-2 col-gap-md md:h-a4-col print:h-a4-col col-fill-auto">
 
-        <!-- Left Column -->
-        <div>
+        <section class="mt-8 first:mt-0">
 
-          <!-- Summary -->
-          <section class="section">
-            <h2>Professional Summary</h2>
-            <p>
-              Seasoned strategic operations leader with 8+ years of experience driving scale-up initiatives and
-              operational excellence.
-              Proven track record in transforming early-stage companies into market leaders through strategic planning,
-              partnership development,
-              and innovative growth strategies. Expert in sports technology and agricultural technology sectors with
-              demonstrated success in
-              launching products used by athletes worldwide and building digital marketplaces.
-            </p>
-            <p>
-              Specialized in operational transformation, business development, and cross-functional team leadership with
-              a focus on
-              sustainable growth and market expansion. Combines engineering background with entrepreneurial mindset to
-              deliver
-              measurable business outcomes.
-            </p>
-          </section>
+          <!-- To keep in the same column -->
+          <div class="break-inside-avoid">
 
-          <!-- Skills -->
-          <section class="section">
-            <h2>Core Competencies</h2>
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal" data-i18n="about.title">
+              ÜBER MICH
+            </h2>
 
-            <div style="margin-bottom: 2rem;">
-              <h3>Strategic Operations</h3>
-              <div class="skills-grid">
-                <span class="skill-tag">Operational Excellence</span>
-                <span class="skill-tag">Scale-Up Leadership</span>
-                <span class="skill-tag">Process Optimization</span>
-                <span class="skill-tag">Strategic Planning</span>
-                <span class="skill-tag">Performance Management</span>
-                <span class="skill-tag">Risk Management</span>
-              </div>
-            </div>
-
-            <div style="margin-bottom: 2rem;">
-              <h3>Business Development</h3>
-              <div class="skills-grid">
-                <span class="skill-tag">Partnership Development</span>
-                <span class="skill-tag">Market Analysis</span>
-                <span class="skill-tag">Growth Strategy</span>
-                <span class="skill-tag">Business Transformation</span>
-                <span class="skill-tag">Revenue Optimization</span>
-                <span class="skill-tag">Market Entry</span>
-              </div>
-            </div>
-
-            <div style="margin-bottom: 2rem;">
-              <h3>Technology & Innovation</h3>
-              <div class="skills-grid">
-                <span class="skill-tag">Sports Technology</span>
-                <span class="skill-tag">AgTech Solutions</span>
-                <span class="skill-tag">Digital Platforms</span>
-                <span class="skill-tag">Innovation Management</span>
-                <span class="skill-tag">Product Development</span>
-                <span class="skill-tag">Digital Marketing</span>
-              </div>
-            </div>
-
-            <div>
-              <h3>Leadership & Management</h3>
-              <div class="skills-grid">
-                <span class="skill-tag">Team Leadership</span>
-                <span class="skill-tag">Project Management</span>
-                <span class="skill-tag">Change Management</span>
-                <span class="skill-tag">Stakeholder Management</span>
-                <span class="skill-tag">German (Native)</span>
-                <span class="skill-tag">English (Fluent)</span>
-              </div>
-            </div>
-          </section>
-
-          <!-- Contact -->
-          <section class="section">
-            <h2>Contact Information</h2>
-            <ul class="contact-list">
-              <li class="contact-item">
-                <strong>Location:</strong> Magdeburg, Germany
-              </li>
-              <li class="contact-item">
-                <strong>Email:</strong>
-                <a href="mailto:tlinnecke@gmail.com" class="contact-link">tlinnecke@gmail.com</a>
-              </li>
-              <li class="contact-item">
-                <strong>LinkedIn:</strong>
-                <a href="https://linkedin.com/in/torsten-linnecke" class="contact-link external-link" target="_blank"
-                  rel="noopener noreferrer">torsten-linnecke</a>
-              </li>
-              <li class="contact-item">
-                <strong>GitHub:</strong>
-                <a href="https://github.com/p3LZ3r" class="contact-link external-link" target="_blank"
-                  rel="noopener noreferrer">p3LZ3r</a>
-              </li>
-            </ul>
-          </section>
-
-        </div>
-
-        <!-- Right Column -->
-        <div>
-
-          <!-- Experience -->
-          <section class="section">
-            <h2>Professional Experience</h2>
-
-            <article class="experience-item">
-              <header class="item-header">
-                <h3>Chief Operating Officer</h3>
-                <div class="item-meta">BM Sports Technology GmbH • May 2017 – July 2025</div>
+            <section class="mb-4.5 break-inside-avoid">
+              <header>
+                <h3 class="text-lg font-semibold text-gray-700 leading-snugish" data-i18n="about.company">
+                  Design/Code
+                </h3>
+                <p class="leading-normal text-md text-gray-650" data-i18n="about.period">
+                  Seit 2014
+                </p>
               </header>
-              <p>
-                Led comprehensive operational and strategic development initiatives that transformed the company into a
-                top-tier player in the sports technology market, with products used daily by athletes worldwide.
+              <p class="mt-2.1 text-md text-gray-700 leading-normal" data-i18n="about.description">
+                Gestaltung und Umsetzung digitaler Markenauftritte, die Konvertieren, für lokale und nationale
+                Champions.
               </p>
-              <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                <li>Scaled operations from startup to market leader, increasing revenue by 400%</li>
-                <li>Established strategic partnerships with 50+ sports organizations globally</li>
-                <li>Led cross-functional teams of 25+ professionals across development, marketing, and sales</li>
-                <li>Implemented operational excellence frameworks reducing costs by 30%</li>
-                <li>Launched successful Kickstarter campaign raising $180K in funding</li>
+            </section>
+
+          </div>
+
+        </section>
+
+        <section class="mt-8 first:mt-0">
+
+          <!-- To keep in the same column -->
+          <div class="break-inside-avoid">
+
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal"
+              data-i18n="experience.title">
+              ERFAHRUNG
+            </h2>
+
+            <section class="mb-4.5 break-inside-avoid">
+              <header>
+                <h3 class="text-lg font-semibold text-gray-700 leading-snugish"
+                  data-i18n="experience.positions.0.company">
+                  BM Sports Technology GmbH
+                </h3>
+                <p class="leading-normal text-md text-gray-650">
+                  <span data-i18n="experience.positions.0.period">Mai 2017 – Juli 2025</span> | <span
+                    data-i18n="experience.positions.0.position">Chief Operating Officer</span>
+                </p>
+              </header>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal" data-i18n="experience.positions.0.description">
+                Leitung umfassender operativer und strategischer Entwicklungsinitiativen, die das Unternehmen zu einem
+                Top-Player auf dem Sporttechnologiemarkt machten, dessen Produkte von Athleten auf der ganzen Welt
+                tagtäglich genutzt werden.
+              </p>
+            </section>
+
+          </div>
+
+        </section>
+
+        <section class="mt-8 first:mt-0">
+
+          <!-- To keep in the same column -->
+          <div class="break-inside-avoid">
+
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal"
+              data-i18n="education.title">
+              AUSBILDUNG
+            </h2>
+
+            <section class="mb-4.5 break-inside-avoid">
+              <header>
+                <h3 class="text-lg font-semibold text-gray-700 leading-snugish"
+                  data-i18n="education.degrees.0.institution">
+                  Otto-von-Guericke-Universität Magdeburg
+                </h3>
+                <p class="leading-normal text-md text-gray-650">
+                  <span data-i18n="education.degrees.0.period">2014 – 2017</span> | <span
+                    data-i18n="education.degrees.0.degree">Master of Science in Wirtschaftsingenieurwesen für
+                    Maschinenbau</span>
+                </p>
+              </header>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal" data-i18n="education.degrees.0.description">
+                Vertiefung in Produktionstechnik; zum Wahrnehmen einer Unternehmensgründung während des Schreibens der
+                Masterarbeit abgebrochen
+              </p>
+            </section>
+
+            <section class="mb-4.5 break-inside-avoid">
+              <header>
+                <h3 class="text-lg font-semibold text-gray-700 leading-snugish"
+                  data-i18n="education.degrees.1.institution">
+                  Otto-von-Guericke-Universität Magdeburg
+                </h3>
+                <p class="leading-normal text-md text-gray-650">
+                  <span data-i18n="education.degrees.1.period">2009 – 2014</span> | <span
+                    data-i18n="education.degrees.1.degree">Bachelor of Science in Wirtschaftsingenieurwesen für
+                    Maschinenbau</span>
+                </p>
+              </header>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal" data-i18n="education.degrees.1.description">
+                Vertiefung in Produktionstechnik & Ressourceneffizienz und Nachhaltigkeit
+              </p>
+            </section>
+
+          </div>
+
+        </section>
+
+        <section class="mt-8 first:mt-0">
+
+          <!-- To keep in the same column -->
+          <div class="break-inside-avoid">
+
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal"
+              data-i18n="projects.title">
+              PROJEKTE
+            </h2>
+
+            <section class="mb-4.5 break-inside-avoid">
+              <header>
+                <h3 class="text-lg font-semibold text-gray-700 leading-snugish" data-i18n="projects.items.0.name">
+                  Kickstarter Kampagne
+                </h3>
+                <p class="leading-normal text-md text-gray-650">
+                  <span data-i18n="projects.items.0.period">2018</span> | <a
+                    href="//www.kickstarter.com/projects/629181264/vmaxpro-digitize-your-strength-training-like-the-p"
+                    class="group">
+                    <span data-i18n="projects.items.0.link">Link</span>
+                    <span
+                      class="inline-block text-gray-550 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in">↗</span>
+                  </a>
+                </p>
+              </header>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal" data-i18n="projects.items.0.description">
+                Planung, Gestaltung und Umsetzung einer erfolgreich finanzierten Kickstarter Kampagne als Growth Hack
+                für eine Early Stage Startup.
+              </p>
+            </section>
+
+            <section class="mb-4.5 break-inside-avoid">
+              <header>
+                <h3 class="text-lg font-semibold text-gray-700 leading-snugish" data-i18n="projects.items.1.name">
+                  Agoria - der digitale Marktplatz für landwirtschaftliche Betriebsmittel
+                </h3>
+                <p class="leading-normal text-md text-gray-650">
+                  <span data-i18n="projects.items.1.period">2016 – 2017</span> | <span
+                    data-i18n="projects.items.1.type">AgTech Platform</span>
+                </p>
+              </header>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal" data-i18n="projects.items.1.description">
+                Gründung und Entwicklung eines digitalen Marktplatzes für landwirtschaftliche Produkte, der Landwirte
+                mit
+                Lieferanten durch innovative Technologielösungen verbindet.
+              </p>
+            </section>
+
+          </div>
+
+        </section>
+
+        <section class="mt-8 first:mt-0">
+
+          <!-- To keep in the same column -->
+          <div class="break-inside-avoid">
+
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal"
+              data-i18n="qualifications.title">
+              QUALIFIKATIONEN
+            </h2>
+
+            <section class="mb-4.5 break-inside-avoid">
+              <header>
+                <h3 class="text-lg font-semibold text-gray-700 leading-snugish"
+                  data-i18n="qualifications.skills.0.category">
+                  Business Development
+                </h3>
+                <p class="leading-normal text-md text-gray-650" data-i18n="qualifications.skills.0.level">
+                  Expert Level
+                </p>
+              </header>
+              <p class="mt-2.1 text-md text-gray-700 leading-normal" data-i18n="qualifications.skills.0.description">
+                Strategic planning, partnership development, market analysis, and entrepreneurial leadership with focus
+                on agricultural technology and digital marketplaces.
+              </p>
+              <div class="my-3.2 last:pb-1.5">
+                <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200"
+                    data-i18n="qualifications.skills.0.tags.0">
+                    Strategic Planning
+                  </li>
+                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200"
+                    data-i18n="qualifications.skills.0.tags.1">
+                    Partnership Development
+                  </li>
+                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200"
+                    data-i18n="qualifications.skills.0.tags.2">
+                    Market Analysis
+                  </li>
+                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200"
+                    data-i18n="qualifications.skills.0.tags.3">
+                    AgTech
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+          </div>
+
+          <section class="mb-4.5 break-inside-avoid">
+            <header>
+              <h3 class="text-lg font-semibold text-gray-700 leading-snugish"
+                data-i18n="qualifications.skills.1.category">
+                Zusätzliche Qualifikationen
+              </h3>
+            </header>
+            <div class="my-3.2 last:pb-1.5">
+              <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
+                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200"
+                  data-i18n="qualifications.skills.1.tags.0">
+                  Project Management
+                </li>
+                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200"
+                  data-i18n="qualifications.skills.1.tags.1">
+                  Digital Marketing
+                </li>
+                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200"
+                  data-i18n="qualifications.skills.1.tags.2">
+                  Product Development
+                </li>
+                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200"
+                  data-i18n="qualifications.skills.1.tags.3">
+                  Team Leadership
+                </li>
+                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200"
+                  data-i18n="qualifications.skills.1.tags.4">
+                  Innovation Management
+                </li>
+                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200"
+                  data-i18n="qualifications.skills.1.tags.5">
+                  German
+                </li>
+                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 print:bg-white print:border-inset bg-gray-200"
+                  data-i18n="qualifications.skills.1.tags.6">
+                  English
+                </li>
               </ul>
-            </article>
+            </div>
+          </section>
 
-            <article class="experience-item">
-              <header class="item-header">
-                <h3>Founder & CEO</h3>
-                <div class="item-meta">Agoria (AgTech Platform) • 2016 – 2017</div>
-              </header>
-              <p>
-                Founded and developed a digital marketplace for agricultural products, connecting farmers with suppliers
-                through innovative technology solutions.
-              </p>
-              <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                <li>Built MVP and secured initial funding of €50K</li>
-                <li>Developed platform connecting 100+ agricultural suppliers</li>
-                <li>Created innovative supply chain optimization algorithms</li>
-                <li>Established partnerships with regional farming cooperatives</li>
+        </section>
+
+        <section class="mt-8 first:mt-0">
+
+          <!-- To keep in the same column -->
+          <div class="break-inside-avoid">
+
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal"
+              data-i18n="contact.title">
+              KONTAKT
+            </h2>
+
+            <section class="mb-4.5 break-inside-avoid">
+              <ul class="list-inside pr-7">
+                <li class="mt-1.5 leading-normal text-gray-700 text-md">
+                  <a href="//linkedin.com/in/torsten-linnecke" class="group">
+                    <span data-i18n="contact.items.0.label">LinkedIn</span>
+                    <span
+                      class="inline-block text-gray-550 print:text-black font-normal group-hover:text-gray-700 transition duration-100 ease-in">↗</span>
+                  </a>
+                </li>
+                <li class="mt-1.5 leading-normal text-gray-700 text-md" data-i18n="contact.items.1.label">
+                  39112 Magdeburg, Germany
+                </li>
+                <li class="mt-1.5 leading-normal text-gray-700 text-md" data-i18n="contact.items.2.label">
+                  tlinnecke@gmail.com
+                </li>
               </ul>
-            </article>
+            </section>
 
-            <article class="experience-item">
-              <header class="item-header">
-                <h3>Design & Development Consultant</h3>
-                <div class="item-meta">Freelance • 2014 – Present</div>
-              </header>
-              <p>
-                Design and implementation of digital brand experiences that convert, for local and national champions.
-              </p>
-              <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
-                <li>Delivered 50+ successful digital transformation projects</li>
-                <li>Achieved average conversion rate improvement of 85%</li>
-                <li>Specialized in performance-driven design and development</li>
-              </ul>
-            </article>
-          </section>
+          </div>
 
-          <!-- Education -->
-          <section class="section">
-            <h2>Education</h2>
+        </section>
 
-            <article class="education-item">
-              <header class="item-header">
-                <h3>Master of Science in Industrial Engineering</h3>
-                <div class="item-meta">Otto-von-Guericke-Universität Magdeburg • 2014 – 2017</div>
-              </header>
-              <p>
-                Specialization in Production Technology. Program interrupted to pursue entrepreneurial opportunity
-                during thesis preparation, demonstrating commitment to practical application of engineering principles
-                in business contexts.
-              </p>
-            </article>
-
-            <article class="education-item">
-              <header class="item-header">
-                <h3>Bachelor of Science in Industrial Engineering</h3>
-                <div class="item-meta">Otto-von-Guericke-Universität Magdeburg • 2009 – 2014</div>
-              </header>
-              <p>
-                Specializations in Production Technology, Resource Efficiency, and Sustainability. Strong foundation
-                in engineering principles combined with business acumen.
-              </p>
-            </article>
-          </section>
-
-          <!-- Key Projects -->
-          <section class="section">
-            <h2>Notable Projects</h2>
-
-            <article class="project-item">
-              <header class="item-header">
-                <h3>Kickstarter Campaign Success</h3>
-                <div class="item-meta">2018 • <a
-                    href="https://www.kickstarter.com/projects/629181264/vmaxpro-digitize-your-strength-training-like-the-p"
-                    class="contact-link external-link" target="_blank" rel="noopener noreferrer">View Campaign</a></div>
-              </header>
-              <p>
-                Planned, designed, and executed a successfully funded Kickstarter campaign as a growth hack for an
-                early-stage startup,
-                raising $180K and establishing global brand recognition.
-              </p>
-            </article>
-
-            <article class="project-item">
-              <header class="item-header">
-                <h3>Digital Marketplace Development</h3>
-                <div class="item-meta">Agoria Platform • 2016 – 2017</div>
-              </header>
-              <p>
-                Created comprehensive digital ecosystem connecting agricultural suppliers with farmers, featuring
-                real-time pricing, inventory management, and logistics optimization.
-              </p>
-            </article>
-          </section>
-
-        </div>
-      </main>
+      </div>
+      <!-- end Column -->
 
     </div>
-  </div>
+    <!-- end Page -->
 
-  <!-- Performance and Analytics Scripts -->
+  </main>
+
+
   <script>
-    // Optimize image loading if any images are added later
-    if ('loading' in HTMLImageElement.prototype) {
-      const images = document.querySelectorAll('img[loading="lazy"]');
-      images.forEach(img => {
-        img.src = img.dataset.src;
-      });
-    }
+    // Initialize language switcher when DOM is ready
+    document.addEventListener('DOMContentLoaded', function () {
+      // Create the language switcher in the header
+      if (window.i18n && window.i18n.createLanguageSwitcher) {
+        window.i18n.createLanguageSwitcher('#language-switcher');
+      }
 
-    // Simple analytics tracking for page views (privacy-friendly)
-    if (navigator.sendBeacon) {
-      window.addEventListener('beforeunload', function () {
-        navigator.sendBeacon('/analytics', JSON.stringify({
-          page: 'cv',
-          timestamp: Date.now(),
-          userAgent: navigator.userAgent.substring(0, 100)
-        }));
-      });
-    }
-
-    // Add click tracking for contact links
-    document.querySelectorAll('.contact-link').forEach(link => {
-      link.addEventListener('click', function () {
-        console.log('Contact link clicked:', this.href);
+      // Listen for language change events to update HTML lang attribute
+      window.addEventListener('i18nLanguageChanged', function (event) {
+        document.documentElement.setAttribute('lang', event.detail.lang);
       });
     });
   </script>
