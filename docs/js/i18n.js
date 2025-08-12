@@ -17,9 +17,9 @@
     const EMBEDDED_TRANSLATIONS = {
         'en': {
             "meta": {
-                "title": "Torsten Linnecke — Resume",
-                "description": "Entrepreneur and COO",
-                "keywords": "resume,cv,Torsten Linnecke",
+                "title": "Torsten Linnecke — Resume | COO & Entrepreneur",
+                "description": "Entrepreneur and COO with expertise in sports technology, business development, and strategic operations. Magdeburg, Germany.",
+                "keywords": "resume,cv,Torsten Linnecke,COO,sports technology,business development,entrepreneur,magdeburg,germany,strategic planning,operations management",
                 "author": "Torsten Linnecke"
             },
             "header": {
@@ -126,9 +126,9 @@
         },
         'de': {
             "meta": {
-                "title": "Torsten Linnecke — Resume",
-                "description": "Unternehmer und COO",
-                "keywords": "resume,cv,Torsten Linnecke",
+                "title": "Torsten Linnecke — Lebenslauf | COO & Unternehmer",
+                "description": "Unternehmer und COO mit Expertise in Sporttechnologie, Geschäftsentwicklung und strategischen Operationen. Magdeburg, Deutschland.",
+                "keywords": "resume,cv,lebenslauf,Torsten Linnecke,COO,sporttechnologie,geschäftsentwicklung,unternehmer,magdeburg,deutschland,strategic planning,business development",
                 "author": "Torsten Linnecke"
             },
             "header": {
@@ -411,9 +411,21 @@
             document.title = titleTranslation;
         }
 
-        // Update meta description
+        // Update meta tags with data-i18n-attr attribute
+        const metaElements = document.querySelectorAll('[data-i18n-attr][data-i18n]');
+        metaElements.forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            const attr = element.getAttribute('data-i18n-attr');
+            const translation = t(key);
+            
+            if (translation && translation !== key && attr) {
+                element.setAttribute(attr, translation);
+            }
+        });
+        
+        // Legacy: Update meta description for backward compatibility
         const descMeta = document.querySelector('meta[name="description"]');
-        if (descMeta) {
+        if (descMeta && !descMeta.hasAttribute('data-i18n-attr')) {
             const descTranslation = t('meta.description');
             if (descTranslation && descTranslation !== 'meta.description') {
                 descMeta.setAttribute('content', descTranslation);
