@@ -81,24 +81,27 @@
                 "title": "QUALIFICATIONS",
                 "skills": [
                     {
-                        "category": "Business Development",
+                        "category": "Strategic Operations & Scale-Up Leadership",
                         "level": "Expert Level",
-                        "description": "Strategic planning, partnership development, market analysis, and entrepreneurial leadership with focus on agricultural technology and digital marketplaces.",
+                        "description": "End-to-end business scaling from startup to seven-figure revenue with expertise in sports technology, supply chain optimization, and international market development.",
                         "tags": [
-                            "Strategic Planning",
-                            "Partnership Development",
-                            "Market Analysis",
-                            "AgTech"
+                            "Strategic Planning & Execution",
+                            "Supply Chain Management",
+                            "Full-Stack Business Development",
+                            "Sports Technology Innovation",
+                            "International Logistics & Expansion",
+                            "Cross-Functional Team Leadership",
+                            "DevOps & Technical Operations",
+                            "Customer Relations & Key Account Management"
                         ]
                     },
                     {
                         "category": "Additional Qualifications",
                         "tags": [
-                            "Project Management",
+                            "UX/UI Design",
                             "Digital Marketing",
-                            "Product Development",
-                            "Team Leadership",
-                            "Innovation Management",
+                            "Design Engineering",
+                            "Accounting",
                             "German",
                             "English"
                         ]
@@ -190,26 +193,29 @@
                 "title": "QUALIFIKATIONEN",
                 "skills": [
                     {
-                        "category": "Business Development",
-                        "level": "Expert Level",
-                        "description": "Strategic planning, partnership development, market analysis, and entrepreneurial leadership with focus on agricultural technology and digital marketplaces.",
+                        "category": "Strategic Operations & Scale-Up Leadership",
+                        "level": "Experten Level",
+                        "description": "End-to-End-Geschäftsskalierung vom Startup bis zum siebenstelligen Umsatz mit Expertise in Sporttechnologie, Lieferkettenoptimierung und internationaler Marktentwicklung",
                         "tags": [
-                            "Strategic Planning",
-                            "Partnership Development",
-                            "Market Analysis",
-                            "AgTech"
+                            "Strategische Planung & Ausführung",
+                            "Lieferkettenmanagement",
+                            "Full-Stack Business Development",
+                            "Sport-Technologie-Innovation",
+                            "Internationale Logistik und Expansion",
+                            "Funktionsübergreifende Teamführung",
+                            "DevOps & Technischer Betrieb",
+                            "Kundenbeziehungen & Key Account Management"
                         ]
                     },
                     {
                         "category": "Zusätzliche Qualifikationen",
                         "tags": [
-                            "Project Management",
-                            "Digital Marketing",
-                            "Product Development",
-                            "Team Leadership",
-                            "Innovation Management",
-                            "German",
-                            "English"
+                            "UX/UI Design",
+                            "Digitales Marketing",
+                            "Design Engineering",
+                            "Buchaltung",
+                            "Deutsch",
+                            "Englisch"
                         ]
                     }
                 ]
@@ -464,39 +470,30 @@
             const button = document.createElement('button');
             button.textContent = lang.toUpperCase();
 
-            // Base Tailwind classes for all buttons
-            const baseClasses = [
-                'px-3', 'py-2', 'text-sm', 'font-medium', 'transition-all', 'duration-200',
-                'border', 'focus:outline-none', 'focus:ring-2', 'focus:ring-gray-500',
-                'focus:ring-offset-1', 'cursor-pointer'
-            ];
+            // Simple inline styles that work without Tailwind
+            button.style.cssText = `
+                padding: 0.5rem 0.75rem;
+                font-size: 0.875rem;
+                font-weight: 500;
+                border: 1px solid #d1d5db;
+                cursor: pointer;
+                transition: all 0.2s;
+                background: white;
+                color: #6b7280;
+                ${index === 0 ? 'border-top-left-radius: 0.375rem; border-bottom-left-radius: 0.375rem;' : ''}
+                ${index === CONFIG.supportedLangs.length - 1 ? 'border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;' : ''}
+                ${index > 0 ? 'border-left: none;' : ''}
+            `;
 
-            // Conditional classes for button position (first/middle/last)
-            if (CONFIG.supportedLangs.length === 1) {
-                baseClasses.push('rounded-md');
-            } else if (index === 0) {
-                baseClasses.push('rounded-l-md', 'border-r-0');
-            } else if (index === CONFIG.supportedLangs.length - 1) {
-                baseClasses.push('rounded-r-md');
-            } else {
-                baseClasses.push('border-r-0');
-            }
-
-            // Active/inactive state classes
+            // Active/inactive state
             const isActive = currentLang === lang;
             if (isActive) {
-                baseClasses.push(
-                    'bg-gray-700', 'text-white', 'border-gray-700',
-                    'hover:bg-gray-750', 'hover:border-gray-750'
-                );
-            } else {
-                baseClasses.push(
-                    'bg-white', 'text-gray-650', 'border-gray-300',
-                    'hover:bg-gray-50', 'hover:border-gray-400', 'hover:text-gray-700'
-                );
+                button.style.backgroundColor = '#374151';
+                button.style.color = 'white';
+                button.style.borderColor = '#374151';
             }
 
-            button.className = baseClasses.join(' ');
+            button.className = 'lang-switch-btn';
             button.setAttribute('type', 'button');
             button.setAttribute('aria-label', `Switch to ${lang.toUpperCase()}`);
             button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
@@ -508,29 +505,36 @@
                     const btnLang = CONFIG.supportedLangs[btnIndex];
                     const btnIsActive = btnLang === lang;
 
-                    // Remove old state classes
-                    btn.classList.remove(
-                        'bg-gray-700', 'text-white', 'border-gray-700',
-                        'hover:bg-gray-750', 'hover:border-gray-750',
-                        'bg-white', 'text-gray-650', 'border-gray-300',
-                        'hover:bg-gray-50', 'hover:border-gray-400', 'hover:text-gray-700'
-                    );
-
-                    // Add new state classes
+                    // Update visual state
                     if (btnIsActive) {
-                        btn.classList.add(
-                            'bg-gray-700', 'text-white', 'border-gray-700',
-                            'hover:bg-gray-750', 'hover:border-gray-750'
-                        );
+                        btn.style.backgroundColor = '#374151';
+                        btn.style.color = 'white';
+                        btn.style.borderColor = '#374151';
                         btn.setAttribute('aria-pressed', 'true');
                     } else {
-                        btn.classList.add(
-                            'bg-white', 'text-gray-650', 'border-gray-300',
-                            'hover:bg-gray-50', 'hover:border-gray-400', 'hover:text-gray-700'
-                        );
+                        btn.style.backgroundColor = 'white';
+                        btn.style.color = '#6b7280';
+                        btn.style.borderColor = '#d1d5db';
                         btn.setAttribute('aria-pressed', 'false');
                     }
                 });
+            });
+
+            // Add hover effects
+            button.addEventListener('mouseenter', () => {
+                if (currentLang !== lang) {
+                    button.style.backgroundColor = '#f9fafb';
+                    button.style.borderColor = '#9ca3af';
+                    button.style.color = '#374151';
+                }
+            });
+
+            button.addEventListener('mouseleave', () => {
+                if (currentLang !== lang) {
+                    button.style.backgroundColor = 'white';
+                    button.style.borderColor = '#d1d5db';
+                    button.style.color = '#6b7280';
+                }
             });
 
             container.appendChild(button);
