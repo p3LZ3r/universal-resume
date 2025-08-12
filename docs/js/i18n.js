@@ -296,42 +296,48 @@
 
     /**
      * Load translations for a specific language
-     * Uses embedded translations to avoid CORS issues with file:/// protocol
+     * Always tries to fetch JSON files first, uses embedded as fallback only
      */
     async function loadTranslations(lang) {
         try {
-            // Check if we have embedded translations for this language
+            // Always try to fetch from JSON files first
+            const response = await fetch(`${CONFIG.localesPath}${lang}.json?v=${Date.now()}`);
+            if (response.ok) {
+                translations = await response.json();
+                console.info(`Loaded ${lang}.json translations successfully`);
+                return;
+            }
+            throw new Error(`Failed to load ${lang}.json - status: ${response.status}`);
+        } catch (error) {
+            console.warn(`Error loading translations from JSON for '${lang}':`, error);
+
+            // Fallback: try embedded translations
             if (EMBEDDED_TRANSLATIONS[lang]) {
+                console.warn(`Using embedded ${lang} translations as fallback`);
                 translations = EMBEDDED_TRANSLATIONS[lang];
                 return;
             }
 
-            // Fallback: try to fetch from JSON files (for HTTP/HTTPS contexts)
-            const response = await fetch(`${CONFIG.localesPath}${lang}.json`);
-            if (!response.ok) throw new Error(`Failed to load ${lang}.json`);
-            translations = await response.json();
-        } catch (error) {
-            console.warn(`Error loading translations for '${lang}':`, error);
-
-            // First fallback: try embedded default language
-            if (lang !== CONFIG.defaultLang && EMBEDDED_TRANSLATIONS[CONFIG.defaultLang]) {
-                console.info(`Using embedded ${CONFIG.defaultLang} translations as fallback`);
-                translations = EMBEDDED_TRANSLATIONS[CONFIG.defaultLang];
-                return;
-            }
-
-            // Second fallback: try to fetch default language JSON (for HTTP/HTTPS contexts)
+            // Second fallback: try default language JSON
             if (lang !== CONFIG.defaultLang) {
                 try {
-                    const fallbackResponse = await fetch(`${CONFIG.localesPath}${CONFIG.defaultLang}.json`);
-                    translations = await fallbackResponse.json();
+                    const fallbackResponse = await fetch(`${CONFIG.localesPath}${CONFIG.defaultLang}.json?v=${Date.now()}`);
+                    if (fallbackResponse.ok) {
+                        translations = await fallbackResponse.json();
+                        console.info(`Using ${CONFIG.defaultLang}.json as fallback`);
+                        return;
+                    }
                 } catch (fallbackError) {
-                    console.error('Failed to load fallback translations:', fallbackError);
-                    // Ultimate fallback: use embedded default if available
-                    translations = EMBEDDED_TRANSLATIONS[CONFIG.defaultLang] || {};
+                    console.error('Failed to load fallback JSON:', fallbackError);
                 }
+            }
+
+            // Ultimate fallback: use embedded default
+            if (EMBEDDED_TRANSLATIONS[CONFIG.defaultLang]) {
+                console.warn(`Using embedded ${CONFIG.defaultLang} translations as ultimate fallback`);
+                translations = EMBEDDED_TRANSLATIONS[CONFIG.defaultLang];
             } else {
-                // If we can't load the default language, use empty object
+                console.error('No translations available');
                 translations = {};
             }
         }
