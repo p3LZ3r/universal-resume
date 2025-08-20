@@ -228,12 +228,12 @@
             const key = element.getAttribute('data-i18n');
             const attr = element.getAttribute('data-i18n-attr');
             const translation = t(key);
-            
+
             if (translation && translation !== key && attr) {
                 element.setAttribute(attr, translation);
             }
         });
-        
+
         // Legacy: Update meta description for backward compatibility
         if (elements.legacyDescMeta) {
             const descTranslation = t('meta.description');
@@ -280,54 +280,42 @@
         CONFIG.supportedLangs.forEach((lang, index) => {
             const button = document.createElement('button');
             button.textContent = lang.toUpperCase();
+            button.setAttribute('aria-label', `Switch to ${lang === 'de' ? 'German' : 'English'}`);
+            button.setAttribute('type', 'button');
 
-            // Simple inline styles that work without Tailwind
-            button.style.cssText = `
-                padding: 0.5rem 0.75rem;
-                font-size: 0.875rem;
-                font-weight: 500;
-                border: 1px solid #d1d5db;
-                cursor: pointer;
-                transition: all 0.2s;
-                background: white;
-                color: #6b7280;
-                ${index === 0 ? 'border-top-left-radius: 0.375rem; border-bottom-left-radius: 0.375rem;' : ''}
-                ${index === CONFIG.supportedLangs.length - 1 ? 'border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;' : ''}
-                ${index > 0 ? 'border-left: none;' : ''}
-            `;
+            const isActive = lang === currentLang;
 
-            // Active/inactive state
-            const isActive = currentLang === lang;
-            if (isActive) {
-                button.style.backgroundColor = '#374151';
-                button.style.color = 'white';
-                button.style.borderColor = '#374151';
+            // Base classes for all buttons
+            const baseClasses = [
+                'px-3', 'h-6', 'flex', 'items-center', 'text-sm', 'font-medium', 'cursor-pointer',
+                'transition-all', 'duration-200', 'ease-in-out',
+                'focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-stone-500'
+            ];
+
+            // Conditional classes based on position
+            const positionClasses = [];
+            if (index === 0) {
+                positionClasses.push('rounded-l-full');
+            }
+            if (index === CONFIG.supportedLangs.length - 1) {
+                positionClasses.push('rounded-r-full');
+            }
+            if (CONFIG.supportedLangs.length === 1) {
+                positionClasses.push('rounded-full');
             }
 
-            button.className = 'lang-switch-btn';
-            button.setAttribute('type', 'button');
-            button.setAttribute('aria-label', `Switch to ${lang.toUpperCase()}`);
+            // Active/inactive state classes
+            const stateClasses = isActive
+                ? ['bg-stone-700', 'text-white', 'dark:bg-stone-600', 'dark:text-stone-200']
+                : ['bg-stone-200', 'text-stone-700', 'hover:bg-stone-300', 'dark:bg-stone-700', 'dark:text-stone-200', 'dark:hover:bg-stone-600'];
+
+            // Combine all classes
+            const allClasses = [...baseClasses, ...positionClasses, ...stateClasses];
+            button.className = allClasses.join(' ');
             button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
 
             button.addEventListener('click', () => {
                 setLang(lang);
-            });
-
-            // Add hover effects
-            button.addEventListener('mouseenter', () => {
-                if (currentLang !== lang) {
-                    button.style.backgroundColor = '#f9fafb';
-                    button.style.borderColor = '#9ca3af';
-                    button.style.color = '#374151';
-                }
-            });
-
-            button.addEventListener('mouseleave', () => {
-                if (currentLang !== lang) {
-                    button.style.backgroundColor = 'white';
-                    button.style.borderColor = '#d1d5db';
-                    button.style.color = '#6b7280';
-                }
             });
 
             container.appendChild(button);

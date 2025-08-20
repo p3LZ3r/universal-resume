@@ -106,38 +106,41 @@
   </script>
 </head>
 
-<body class="dark:bg-gray-800">
+<body class="dark:bg-stone-800">
   <main class="font-firago hyphens-manual">
 
     <!-- Page -->
-    <div class="p-6 mx-auto page max-w-2xl print:max-w-a4 md:max-w-a4 md:h-a4 xsm:p-8 sm:p-9 md:p-16 bg-white dark:bg-gray-900">
+    <div
+      class="p-6 mx-auto page max-w-2xl print:max-w-a4 md:max-w-a4 md:h-a4 xsm:p-8 sm:p-9 md:p-16 bg-white dark:bg-stone-900">
 
       <!-- Name -->
-      <header class="flex items-center mb-8 md:mb-11">
-        <div
-          class="initials-container mr-5 text-base leading-none text-white bg-gray-700 dark:bg-gray-600 font-medium print:bg-black px-3 py-2.5">
-          <div class="initial text-center pb-0.5">T</div>
-          <div class="text-center initial">L</div>
+      <header class="grid grid-cols-3 items-center mb-8 md:mb-11 gap-4">
+        <!-- Left: Logo + Name -->
+        <div class="flex items-center justify-self-start">
+          <div
+            class="mr-5 h-6 w-11 flex items-center justify-center text-sm leading-none text-white bg-stone-700 dark:bg-stone-600 font-medium print:bg-black rounded-full">
+            TL
+          </div>
+          <h1 class="text-2xl font-semibold text-stone-750 dark:text-stone-200 pb-px" data-i18n="header.name">
+            Torsten Linnecke
+          </h1>
         </div>
-        <h1 class="text-2xl font-semibold text-gray-750 dark:text-gray-200 pb-px" data-i18n="header.name">
-          Torsten Linnecke
-        </h1>
 
-        <!-- Freelance Pill Tag -->
-        <div class="ml-4 flex items-center print:hidden">
+        <!-- Center: Freelance Pill Tag -->
+        <div class="flex items-center justify-self-center print:hidden">
           <a title="Verfügbar" aria-label="Verfügbar für freiberufliche Arbeit - Kontakt per E-Mail"
             data-cal-link="tlinnecke/45min" data-cal-namespace="45min" data-cal-config='{"layout":"month_view"}'
-            class="inline-flex leading-none items-center px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs font-medium rounded-full cursor-pointer hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
-            <span class="mr-1 text-green-500 animate-pulse" aria-hidden="true">●</span>
+            class="inline-flex leading-none items-center px-3 py-1.5 bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-200 text-sm font-medium rounded-full cursor-pointer hover:bg-stone-300 dark:hover:bg-stone-600 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-500">
+            <span class="mr-1.5 text-green-500 animate-pulse" aria-hidden="true">●</span>
             Verfügbar
           </a>
         </div>
-        <!-- Language Switcher -->
-        <div class="ml-auto print:hidden">
+
+        <!-- Right: Language Switcher & Dark Mode Toggle -->
+        <div class="flex items-center justify-self-end gap-3 print:hidden">
+          <!-- Language Switcher -->
           <div id="language-switcher" class="flex"></div>
-        </div>
-        <!-- Dark Mode Toggle -->
-        <div class="ml-4 print:hidden">
+          <!-- Dark Mode Toggle -->
           <div id="dark-mode-toggle" class="flex"></div>
         </div>
       </header>
@@ -151,18 +154,20 @@
           <!-- To keep in the same column -->
           <div class="break-inside-avoid">
 
-            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal" data-i18n="about.title">
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-stone-550 print:font-normal"
+              data-i18n="about.title">
               ÜBER MICH
             </h2>
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish" data-i18n="about.company">
+                <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
+                  data-i18n="about.company">
                   Design/Code
                 </h3>
-                                <p class="leading-normal text-md text-gray-650 dark:text-gray-400">
+                <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
               </header>
-              <p class="mt-2.1 text-md text-gray-700 dark:text-gray-300 leading-normal" data-i18n="about.description">
+              <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal" data-i18n="about.description">
                 Gestaltung und Umsetzung digitaler Markenauftritte, die Konvertieren, für lokale und nationale
                 Champions.
               </p>
@@ -177,23 +182,24 @@
           <!-- To keep in the same column -->
           <div class="break-inside-avoid">
 
-            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal"
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-stone-550 print:font-normal"
               data-i18n="experience.title">
               ERFAHRUNG
             </h2>
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish"
+                <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
                   data-i18n="experience.positions.0.company">
                   BM Sports Technology GmbH
                 </h3>
-                <p class="leading-normal text-md text-gray-650 dark:text-gray-400">
+                <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
                   <span data-i18n="experience.positions.0.period">Mai 2017 – Juli 2025</span> | <span
                     data-i18n="experience.positions.0.position">Chief Operating Officer</span>
                 </p>
               </header>
-              <p class="mt-2.1 text-md text-gray-700 dark:text-gray-300 leading-normal" data-i18n="experience.positions.0.description">
+              <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
+                data-i18n="experience.positions.0.description">
                 Leitung umfassender operativer und strategischer Entwicklungsinitiativen, die das Unternehmen zu einem
                 Top-Player auf dem Sporttechnologiemarkt machten, dessen Produkte von Athleten auf der ganzen Welt
                 tagtäglich genutzt werden.
@@ -209,24 +215,25 @@
           <!-- To keep in the same column -->
           <div class="break-inside-avoid">
 
-            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal"
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-stone-550 print:font-normal"
               data-i18n="education.title">
               AUSBILDUNG
             </h2>
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish"
+                <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
                   data-i18n="education.degrees.0.institution">
                   Otto-von-Guericke-Universität Magdeburg
                 </h3>
-                <p class="leading-normal text-md text-gray-650 dark:text-gray-400">
+                <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
                   <span data-i18n="education.degrees.0.period">2014 – 2017</span> | <span
                     data-i18n="education.degrees.0.degree">Master of Science in Wirtschaftsingenieurwesen für
                     Maschinenbau</span>
                 </p>
               </header>
-              <p class="mt-2.1 text-md text-gray-700 dark:text-gray-300 leading-normal" data-i18n="education.degrees.0.description">
+              <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
+                data-i18n="education.degrees.0.description">
                 Vertiefung in Produktionstechnik; zum Wahrnehmen einer Unternehmensgründung während des Schreibens der
                 Masterarbeit abgebrochen
               </p>
@@ -234,17 +241,18 @@
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish"
+                <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
                   data-i18n="education.degrees.1.institution">
                   Otto-von-Guericke-Universität Magdeburg
                 </h3>
-                <p class="leading-normal text-md text-gray-650 dark:text-gray-400">
+                <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
                   <span data-i18n="education.degrees.1.period">2009 – 2014</span> | <span
                     data-i18n="education.degrees.1.degree">Bachelor of Science in Wirtschaftsingenieurwesen für
                     Maschinenbau</span>
                 </p>
               </header>
-              <p class="mt-2.1 text-md text-gray-700 dark:text-gray-300 leading-normal" data-i18n="education.degrees.1.description">
+              <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
+                data-i18n="education.degrees.1.description">
                 Vertiefung in Produktionstechnik & Ressourceneffizienz und Nachhaltigkeit
               </p>
             </section>
@@ -258,40 +266,44 @@
           <!-- To keep in the same column -->
           <div class="break-inside-avoid">
 
-            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal"
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-stone-550 print:font-normal"
               data-i18n="projects.title">
               PROJEKTE
             </h2>
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish" data-i18n="projects.items.0.name">
+                <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
+                  data-i18n="projects.items.0.name">
                   Kickstarter Kampagne
                 </h3>
-                <p class="leading-normal text-md text-gray-650 dark:text-gray-400">
+                <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
                   <span data-i18n="projects.items.0.period">2018</span> | <a
                     href="//www.kickstarter.com/projects/629181264/vmaxpro-digitize-your-strength-training-like-the-p"
                     class="group">
                     <span data-i18n="projects.items.0.link">Link</span>
                     <span
-                      class="inline-block text-gray-550 dark:text-gray-400 print:text-black font-normal group-hover:text-gray-700 dark:group-hover:text-gray-200 transition duration-100 ease-in">↗</span>
+                      class="inline-block text-stone-550 dark:text-stone-400 print:text-black font-normal group-hover:text-stone-700 dark:group-hover:text-stone-200 transition duration-100 ease-in">↗</span>
                   </a>
                 </p>
               </header>
-                            <p class="mt-2.1 text-md text-gray-700 dark:text-gray-300 leading-normal" data-i18n="projects.items.0.description">
+              <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
+                data-i18n="projects.items.0.description">
             </section>
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish" data-i18n="projects.items.1.name">
+                <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
+                  data-i18n="projects.items.1.name">
                   Agoria - der digitale Marktplatz für landwirtschaftliche Betriebsmittel
                 </h3>
-                <p class="leading-normal text-md text-gray-650 dark:text-gray-400">
+                <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
                   <span data-i18n="projects.items.1.period">2016 – 2017</span> | <span
                     data-i18n="projects.items.1.type">AgTech Platform</span>
                 </p>
               </header>
-              <p class="mt-2.1 text-md text-gray-700 dark:text-gray-300 leading-normal" data-i18n="projects.items.1.description">
+              <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
+                data-i18n="projects.items.1.description">
                 Gründung und Entwicklung eines digitalen Marktplatzes für landwirtschaftliche Produkte, der Landwirte
                 mit
                 Lieferanten durch innovative Technologielösungen verbindet.
@@ -307,56 +319,66 @@
           <!-- To keep in the same column -->
           <div class="break-inside-avoid">
 
-            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 print:font-normal"
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-stone-550 print:font-normal"
               data-i18n="qualifications.title">
               QUALIFIKATIONEN
             </h2>
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish"
+                <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
                   data-i18n="qualifications.skills.0.category">
                   Strategic Operations & Scale-Up Leadership
                 </h3>
-                <p class="leading-normal text-md text-gray-650 dark:text-gray-400" data-i18n="qualifications.skills.0.level">
+                <p class="leading-normal text-md text-stone-650 dark:text-stone-400"
+                  data-i18n="qualifications.skills.0.level">
                   Expert Level
                 </p>
               </header>
-              <p class="mt-2.1 text-md text-gray-700 dark:text-gray-300 leading-normal" data-i18n="qualifications.skills.0.description">
+              <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
+                data-i18n="qualifications.skills.0.description">
                 End-to-end business scaling from startup to seven-figure revenue with expertise in sports technology,
                 supply chain optimization, and international market development.
               </p>
               <div class="my-3.2 last:pb-1.5">
                 <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                  <li
+                    class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.0">
                     Strategic Planning & Execution
                   </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                  <li
+                    class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.1">
                     Supply Chain Management
                   </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                  <li
+                    class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.2">
                     Full-Stack Business Development
                   </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                  <li
+                    class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.3">
                     Sports Technology Innovation
                   </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                  <li
+                    class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.4">
                     International Logistics & Expansion
                   </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                  <li
+                    class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.5">
                     Cross-Functional Team Leadership
                   </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                  <li
+                    class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.6">
                     DevOps & Technical Operations
                   </li>
-                  <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                  <li
+                    class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.7">
                     Customer Relations & Key Account Management
                   </li>
@@ -368,34 +390,40 @@
 
           <section class="mb-4.5 break-inside-avoid">
             <header>
-              <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish"
+              <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
                 data-i18n="qualifications.skills.1.category">
                 Additional Qualifications
               </h3>
             </header>
             <div class="my-3.2 last:pb-1.5">
               <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                <li
+                  class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                   data-i18n="qualifications.skills.1.tags.0">
                   UX/UI Design
                 </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                <li
+                  class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                   data-i18n="qualifications.skills.1.tags.1">
                   Digital Marketing
                 </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                <li
+                  class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                   data-i18n="qualifications.skills.1.tags.2">
                   Design Engineering
                 </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                <li
+                  class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                   data-i18n="qualifications.skills.1.tags.3">
                   Accounting
                 </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                <li
+                  class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                   data-i18n="qualifications.skills.1.tags.4">
                   German
                 </li>
-                <li class="px-2.5 mr-1.6 mb-1.6 text-base text-gray-750 dark:text-gray-200 print:bg-white print:border-inset bg-gray-200 dark:bg-gray-700"
+                <li
+                  class="px-2.5 mr-1.6 mb-1.6 text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                   data-i18n="qualifications.skills.1.tags.5">
                   English
                 </li>
@@ -410,24 +438,26 @@
           <!-- To keep in the same column -->
           <div class="break-inside-avoid">
 
-            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-gray-550 dark:text-gray-400 print:font-normal"
+            <h2 class="mb-4 font-bold tracking-widest text-sm2 text-stone-550 dark:text-stone-400 print:font-normal"
               data-i18n="contact.title">
               KONTAKT
             </h2>
 
             <section class="mb-4.5 break-inside-avoid">
               <ul class="list-inside pr-7">
-                <li class="mt-1.5 leading-normal text-gray-700 dark:text-gray-300 text-md">
+                <li class="mt-1.5 leading-normal text-stone-700 dark:text-stone-300 text-md">
                   <a href="//linkedin.com/in/torsten-linnecke" class="group">
                     <span data-i18n="contact.items.0.label">LinkedIn</span>
                     <span
-                      class="inline-block text-gray-550 dark:text-gray-400 print:text-black font-normal group-hover:text-gray-700 dark:group-hover:text-gray-200 transition duration-100 ease-in">↗</span>
+                      class="inline-block text-stone-550 dark:text-stone-400 print:text-black font-normal group-hover:text-stone-700 dark:group-hover:text-stone-200 transition duration-100 ease-in">↗</span>
                   </a>
                 </li>
-                <li class="mt-1.5 leading-normal text-gray-700 dark:text-gray-300 text-md" data-i18n="contact.items.1.label">
+                <li class="mt-1.5 leading-normal text-stone-700 dark:text-stone-300 text-md"
+                  data-i18n="contact.items.1.label">
                   39112 Magdeburg, Germany
                 </li>
-                <li class="mt-1.5 leading-normal text-gray-700 dark:text-gray-300 text-md" data-i18n="contact.items.2.label">
+                <li class="mt-1.5 leading-normal text-stone-700 dark:text-stone-300 text-md"
+                  data-i18n="contact.items.2.label">
                   tlinnecke@gmail.com
                 </li>
               </ul>
@@ -464,48 +494,74 @@
       const htmlElement = document.documentElement;
 
       function createDarkModeToggle() {
-        const themes = ['light', 'dark'];
-
         darkModeToggleContainer.innerHTML = '';
 
-        themes.forEach((theme, index) => {
-          const button = document.createElement('button');
-          button.innerHTML = theme === 'light' ? '<svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>' : '<svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>';
+        const isDark = htmlElement.classList.contains('dark');
 
-          button.style.cssText = `
-            padding: 0.5rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            border: 1px solid #d1d5db;
-            cursor: pointer;
-            transition: all 0.2s;
-            background: white;
-            color: #6b7280;
-            ${index === 0 ? 'border-top-left-radius: 0.375rem; border-bottom-left-radius: 0.375rem;' : ''}
-            ${index === themes.length - 1 ? 'border-top-right-radius: 0.375rem; border-bottom-right-radius: 0.375rem;' : ''}
-            ${index > 0 ? 'border-left: none;' : ''}
-          `;
+        // Create toggle switch container
+        const toggleButton = document.createElement('button');
+        toggleButton.setAttribute('type', 'button');
+        toggleButton.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+        toggleButton.setAttribute('aria-pressed', isDark ? 'true' : 'false');
 
-          const isDark = htmlElement.classList.contains('dark');
-          const isActive = (theme === 'dark' && isDark) || (theme === 'light' && !isDark);
+        // Toggle switch background classes
+        const backgroundClasses = [
+          'relative', 'inline-flex', 'items-center', 'h-6', 'w-11',
+          'flex-shrink-0', 'cursor-pointer', 'rounded-full', 'border-2', 'border-transparent',
+          'transition-colors', 'ease-in-out', 'duration-200',
+          'focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-stone-500'
+        ];
 
-          if (isActive) {
-            button.style.backgroundColor = '#374151';
-            button.style.color = 'white';
-            button.style.borderColor = '#374151';
+        // Background color based on state
+        const backgroundStateClasses = isDark
+          ? ['bg-stone-400', 'dark:bg-stone-600']
+          : ['bg-stone-200', 'dark:bg-stone-800'];
+
+        toggleButton.className = [...backgroundClasses, ...backgroundStateClasses].join(' ');
+
+        // Create the sliding indicator
+        const indicator = document.createElement('span');
+        indicator.setAttribute('aria-hidden', 'true');
+
+        // Indicator base classes
+        const indicatorClasses = [
+          'pointer-events-none', 'inline-block', 'size-5', 'p-1', 'rounded-full',
+          'bg-white', 'shadow', 'transform', 'ring-0', 'transition', 'ease-in-out', 'duration-200',
+          'flex', 'items-center', 'justify-center'
+        ];
+
+        // Position based on state
+        const positionClasses = isDark ? ['translate-x-5'] : ['translate-x-0'];
+
+        indicator.className = [...indicatorClasses, ...positionClasses].join(' ');
+
+        // Add icon to indicator
+        const icon = document.createElement('div');
+        icon.className = 'size-3 text-stone-400 flex items-center justify-center';
+
+        // Choose icon based on state
+        icon.innerHTML = isDark
+          ? '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>'
+          : '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>';
+
+        indicator.appendChild(icon);
+        toggleButton.appendChild(indicator);
+
+        // Add click event
+        toggleButton.addEventListener('click', () => {
+          const wasLight = !htmlElement.classList.contains('dark');
+
+          if (wasLight) {
+            htmlElement.classList.add('dark');
+          } else {
+            htmlElement.classList.remove('dark');
           }
 
-          button.addEventListener('click', () => {
-            if (theme === 'dark') {
-              htmlElement.classList.add('dark');
-            } else {
-              htmlElement.classList.remove('dark');
-            }
-            createDarkModeToggle();
-          });
-
-          darkModeToggleContainer.appendChild(button);
+          // Recreate toggle to update state
+          createDarkModeToggle();
         });
+
+        darkModeToggleContainer.appendChild(toggleButton);
       }
 
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
@@ -528,8 +584,8 @@
   </script>
   <!-- Cal element-click embed code begins -->
   <script type="text/javascript">
-    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-  Cal("init", "45min", {origin:"https://app.cal.com"});
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "45min", { origin: "https://app.cal.com" });
 
 
     // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
@@ -537,9 +593,9 @@
     // data-cal-namespace="45min"
     // `data-cal-config='{"layout":"month_view"}'`
 
-    Cal.ns["45min"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#1d2993"},"dark":{"cal-brand":"#6973cd"}},"hideEventTypeDetails":false,"layout":"month_view"});
-    </script>
-    <!-- Cal element-click embed code ends -->
+    Cal.ns["45min"]("ui", { "cssVarsPerTheme": { "light": { "cal-brand": "#1d2993" }, "dark": { "cal-brand": "#6973cd" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+  </script>
+  <!-- Cal element-click embed code ends -->
 </body>
 
 </html>

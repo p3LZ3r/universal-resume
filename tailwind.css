@@ -1,6 +1,8 @@
 @import "./docs/fira-go.css";
 @import "tailwindcss";
 
+@variant dark (.dark &);
+
 @theme {
   /* Custom font families */
   --font-firago: FiraGO, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -46,12 +48,12 @@
   --spacing-4\.5: 1.125rem;
   --spacing-11: 2.75rem;
 
-  /* Custom gray colors */
-  --color-gray-150: hsl(210, 44%, 97%);
-  --color-gray-250: hsl(210, 40%, 93.5%);
-  --color-gray-550: hsl(218, 20%, 63%);
-  --color-gray-650: hsl(216, 15%, 48%);
-  --color-gray-750: hsl(214, 17%, 32%);
+  /* Custom stone colors */
+  --color-stone-150: hsl(45, 25%, 97%);
+  --color-stone-250: hsl(42, 20%, 93.5%);
+  --color-stone-550: hsl(45, 12%, 63%);
+  --color-stone-650: hsl(38, 8%, 48%);
+  --color-stone-750: hsl(40, 6%, 32%);
 
   /* Additional custom colors */
   --color-link: #fbf3f3;
@@ -144,7 +146,7 @@
 }
 
 @utility border-inset {
-  box-shadow: inset 0 0 0 1px theme(--color-gray-400);
+  box-shadow: inset 0 0 0 1px theme(--color-stone-400);
 }
 
 @utility col-count-1 {
@@ -187,7 +189,7 @@
   column-fill: balance;
 }
 
-@screen print {
+@media print {
   @page {
     margin-top: 0in;
     margin-bottom: 0in;
@@ -202,7 +204,7 @@
   }
 
   .page {
-    padding: theme(spacing.16) theme(spacing.16) !important;
+    padding: 4rem !important;
   }
 
   .initial {
@@ -225,13 +227,13 @@ html {
 
 /* For Letter size */
 
-@screen sm {
+@media (min-width: 640px) {
   html {
     font-size: calc( 13.176471px + (16 - 13.176471) * (100vw - 640px) / (833 - 640) );
   }
 }
 
-@screen md {
+@media (min-width: 811px) {
   html {
     font-size: calc( 12.288px + (16 - 12.288) * (100vw - 833px) / (1079.5 - 833) );
   }
@@ -251,7 +253,7 @@ html {
   }
 } */
 
-@screen lg {
+@media (min-width: 1051px) {
   html {
     font-size: 16px;
   }

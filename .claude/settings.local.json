@@ -6,7 +6,10 @@
       "Bash(npm run build:*)",
       "Bash(npm update)",
       "Bash(rm:*)",
-      "WebFetch(domain:tailwindcss.com)"
+      "WebFetch(domain:tailwindcss.com)",
+      "Bash(timeout 5 npm run serve)",
+      "Bash(grep:*)",
+      "Bash(sed:*)"
     ],
     "deny": [],
     "ask": []
