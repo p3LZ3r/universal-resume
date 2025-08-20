@@ -157,7 +157,7 @@
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish" data-i18n="about.company">
+                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish" data-i18n="about.company">
                   Design/Code
                 </h3>
                                 <p class="leading-normal text-md text-gray-650 dark:text-gray-400">
@@ -184,7 +184,7 @@
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish"
+                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish"
                   data-i18n="experience.positions.0.company">
                   BM Sports Technology GmbH
                 </h3>
@@ -216,7 +216,7 @@
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish"
+                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish"
                   data-i18n="education.degrees.0.institution">
                   Otto-von-Guericke-Universität Magdeburg
                 </h3>
@@ -234,7 +234,7 @@
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish"
+                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish"
                   data-i18n="education.degrees.1.institution">
                   Otto-von-Guericke-Universität Magdeburg
                 </h3>
@@ -265,7 +265,7 @@
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish" data-i18n="projects.items.0.name">
+                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish" data-i18n="projects.items.0.name">
                   Kickstarter Kampagne
                 </h3>
                 <p class="leading-normal text-md text-gray-650 dark:text-gray-400">
@@ -283,7 +283,7 @@
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish" data-i18n="projects.items.1.name">
+                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish" data-i18n="projects.items.1.name">
                   Agoria - der digitale Marktplatz für landwirtschaftliche Betriebsmittel
                 </h3>
                 <p class="leading-normal text-md text-gray-650 dark:text-gray-400">
@@ -314,7 +314,7 @@
 
             <section class="mb-4.5 break-inside-avoid">
               <header>
-                <h3 class="text-lg font-semibold text-gray-700 leading-snugish"
+                <h3 class="text-lg font-semibold text-gray-700 dark:text-gray-200 leading-snugish"
                   data-i18n="qualifications.skills.0.category">
                   Strategic Operations & Scale-Up Leadership
                 </h3>
@@ -461,9 +461,9 @@
 
       // Dark Mode Toggle
       const darkModeToggleContainer = document.getElementById('dark-mode-toggle');
+      const htmlElement = document.documentElement;
 
       function createDarkModeToggle() {
-        const htmlElement = document.documentElement;
         const themes = ['light', 'dark'];
 
         darkModeToggleContainer.innerHTML = '';
@@ -508,9 +508,14 @@
         });
       }
 
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+      if (prefersDark.matches) {
+        htmlElement.classList.add('dark');
+      }
+
       createDarkModeToggle();
 
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
       prefersDark.addEventListener('change', (event) => {
         if (event.matches) {
           htmlElement.classList.add('dark');
