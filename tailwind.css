@@ -1,7 +1,191 @@
 @import "./docs/fira-go.css";
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss";
+
+@theme {
+  /* Custom font families */
+  --font-firago: FiraGO, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  /* Custom font sizes */
+  --font-size-sm2: 0.9375rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.0625rem;
+  --font-size-lg: 1.125rem;
+
+  /* Custom line heights */
+  --line-height-snugish: 1.32;
+  --line-height-normal: 1.34;
+
+  /* Custom breakpoints - For A4 size */
+  --breakpoint-screen: screen;
+  --breakpoint-print: print;
+  --breakpoint-xsm: 500px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 811px;
+  --breakpoint-lg: 1051px;
+  --breakpoint-xl: 1280px;
+
+  /* Custom max widths */
+  --max-width-letter: 66.40625rem;
+  --max-width-a4: 64.609375rem;
+
+  /* Custom heights */
+  --height-letter: 85.9375rem;
+  --height-letter-col: 71.625rem;
+  --height-letter-col-full: 77.9375rem;
+  --height-a4: 91.350883rem;
+  --height-a4-col: 77.038383rem;
+  --height-a4-col-full: 83.350883rem;
+
+  /* Custom spacing values */
+  --spacing-0\.5: 2px;
+  --spacing-1\.5: 0.375rem;
+  --spacing-1\.6: 0.4375rem;
+  --spacing-2\.1: 0.5625rem;
+  --spacing-2\.5: 10px;
+  --spacing-3\.2: 0.8125rem;
+  --spacing-4\.5: 1.125rem;
+  --spacing-11: 2.75rem;
+
+  /* Custom gray colors */
+  --color-gray-150: hsl(210, 44%, 97%);
+  --color-gray-250: hsl(210, 40%, 93.5%);
+  --color-gray-550: hsl(218, 20%, 63%);
+  --color-gray-650: hsl(216, 15%, 48%);
+  --color-gray-750: hsl(214, 17%, 32%);
+
+  /* Additional custom colors */
+  --color-link: #fbf3f3;
+}
+
+/* Base styles */
+@layer base {
+  body {
+    -webkit-font-smoothing: subpixel-antialiased;
+  }
+}
+
+/* Custom Utilities using v4 syntax */
+@utility optimize-legibility {
+  text-rendering: optimizeLegibility;
+}
+
+@utility ligatures {
+  font-variant-ligatures: common-ligatures;
+  font-feature-settings: 'liga' on, 'clig' on;
+}
+
+@utility kerning {
+  font-kerning: normal;
+  font-feature-settings: 'kern' on;
+}
+
+@utility small-caps {
+  font-variant-caps: small-caps;
+  font-feature-settings: 'smcp' on;
+}
+
+@utility all-small-caps {
+  font-variant-caps: all-small-caps;
+  font-feature-settings: 'c2sc' on, 'smcp' on;
+}
+
+@utility lining-nums {
+  font-variant-numeric: lining-nums;
+  font-feature-settings: 'lnum' on;
+}
+
+@utility oldstyle-nums {
+  font-variant-numeric: oldstyle-nums;
+  font-feature-settings: 'onum' on;
+}
+
+@utility proportional-nums {
+  font-variant-numeric: proportional-nums;
+  font-feature-settings: 'pnum' on;
+}
+
+@utility tabular-nums {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' on;
+}
+
+@utility slashed-zero {
+  font-variant-numeric: slashed-zero;
+  font-feature-settings: 'zero' on;
+}
+
+@utility super {
+  font-variant-position: super;
+  font-feature-settings: 'sups' on;
+}
+
+@utility sub {
+  font-variant-position: sub;
+  font-feature-settings: 'sub' on;
+}
+
+@utility ordinal {
+  font-variant-position: ordinal;
+  font-feature-settings: 'ordn' on;
+}
+
+@utility fractions {
+  font-variant-numeric: diagonal-fractions;
+  font-feature-settings: 'frac' on;
+}
+
+@utility case-sensitive {
+  text-transform: uppercase;
+  font-feature-settings: 'case' on;
+}
+
+@utility hyphens-manual {
+  hyphens: manual;
+}
+
+@utility border-inset {
+  box-shadow: inset 0 0 0 1px theme(--color-gray-400);
+}
+
+@utility col-count-1 {
+  column-count: 1;
+}
+
+@utility col-count-2 {
+  column-count: 2;
+}
+
+@utility col-count-3 {
+  column-count: 3;
+}
+
+@utility col-gap-md {
+  column-gap: 2.1875rem;
+}
+
+@utility break-after-col {
+  break-after: column;
+}
+
+@utility break-inside-avoid {
+  break-inside: avoid;
+}
+
+@utility break-after-avoid {
+  break-after: avoid;
+}
+
+@utility break-before-avoid {
+  break-after: avoid;
+}
+
+@utility col-fill-auto {
+  column-fill: auto;
+}
+
+@utility col-fill-balance {
+  column-fill: balance;
+}
 
 @screen print {
   @page {

@@ -5,9 +5,7 @@ const purgecss = require("@fullhuman/postcss-purgecss")({
 
 module.exports = {
   plugins: [
-    require("postcss-import"),
-    require("tailwindcss"),
-    require("autoprefixer"),
+    require("@tailwindcss/postcss"),
     ...process.env.NODE_ENV === "build" ?
       [purgecss, require("cssnano")] : []
   ]
