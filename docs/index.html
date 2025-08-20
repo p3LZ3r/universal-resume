@@ -125,9 +125,9 @@
 
         <!-- Freelance Pill Tag -->
         <div class="ml-4 flex items-center print:hidden">
-          <a href="mailto:tlinnecke@gmail.com"
-            class="inline-flex leading-none items-center px-2 py-1 bg-gray-200 text-gray-700 text-xs font-medium rounded-full cursor-pointer hover:bg-gray-300 transition-colors"
-            title="Verfügbar" aria-label="Verfügbar für freiberufliche Arbeit - Kontakt per E-Mail">
+          <a title="Verfügbar" aria-label="Verfügbar für freiberufliche Arbeit - Kontakt per E-Mail"
+            data-cal-link="tlinnecke/45min" data-cal-namespace="45min" data-cal-config='{"layout":"month_view"}'
+            class="inline-flex leading-none items-center px-2 py-1 bg-gray-200 text-gray-700 text-xs font-medium rounded-full cursor-pointer hover:bg-gray-300 transition-colors">
             <span class="mr-1 text-green-500 animate-pulse" aria-hidden="true">●</span>
             Verfügbar
           </a>
@@ -461,7 +461,20 @@
       });
     });
   </script>
+  <!-- Cal element-click embed code begins -->
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "45min", {origin:"https://app.cal.com"});
 
+
+    // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
+    // `data-cal-link="tlinnecke/45min"`
+    // data-cal-namespace="45min"
+    // `data-cal-config='{"layout":"month_view"}'`
+
+    Cal.ns["45min"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#1d2993"},"dark":{"cal-brand":"#6973cd"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+    <!-- Cal element-click embed code ends -->
 </body>
 
 </html>
