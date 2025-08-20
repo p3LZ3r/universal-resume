@@ -311,24 +311,6 @@
 
             button.addEventListener('click', () => {
                 setLang(lang);
-                // Update active states for all buttons
-                container.querySelectorAll('button').forEach((btn, btnIndex) => {
-                    const btnLang = CONFIG.supportedLangs[btnIndex];
-                    const btnIsActive = btnLang === lang;
-
-                    // Update visual state
-                    if (btnIsActive) {
-                        btn.style.backgroundColor = '#374151';
-                        btn.style.color = 'white';
-                        btn.style.borderColor = '#374151';
-                        btn.setAttribute('aria-pressed', 'true');
-                    } else {
-                        btn.style.backgroundColor = 'white';
-                        btn.style.color = '#6b7280';
-                        btn.style.borderColor = '#d1d5db';
-                        btn.setAttribute('aria-pressed', 'false');
-                    }
-                });
             });
 
             // Add hover effects
