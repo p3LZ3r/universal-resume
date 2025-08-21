@@ -74,6 +74,11 @@
         // Load and apply translations
         loadTranslations(lang).then(() => {
             updatePageText();
+            // Recreate language switcher to update visual state
+            const languageSwitcher = document.querySelector('#language-switcher');
+            if (languageSwitcher) {
+                createLanguageSwitcher('#language-switcher');
+            }
             // Trigger custom event for other components to react
             window.dispatchEvent(new CustomEvent('i18nLanguageChanged', { detail: { lang } }));
         });
@@ -306,7 +311,7 @@
 
             // Active/inactive state classes
             const stateClasses = isActive
-                ? ['bg-stone-700', 'text-white', 'dark:bg-stone-600', 'dark:text-stone-200']
+                ? ['bg-stone-400', 'text-stone-700', 'dark:bg-stone-600', 'dark:text-stone-200']
                 : ['bg-stone-200', 'text-stone-700', 'hover:bg-stone-300', 'dark:bg-stone-700', 'dark:text-stone-200', 'dark:hover:bg-stone-600'];
 
             // Combine all classes
