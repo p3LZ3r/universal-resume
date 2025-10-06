@@ -53,9 +53,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add docs/build.css
-          git commit -m "chore: update build.css
-
-🤖 Generated with GitHub Actions"
+          git commit -m "chore: update build.css [skip ci]"
           git push
 
       - name: Trigger Coolify Deployment (Optional)
