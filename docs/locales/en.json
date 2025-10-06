@@ -12,7 +12,7 @@
     "about": {
         "title": "ABOUT ME",
         "company": "Design/Code",
-        "period": "Since 2014",
+        "period": "Since 2017",
         "description": "Design and implementation of digital brand experiences that convert, for local and national champions."
     },
     "experience": {
@@ -23,6 +23,12 @@
                 "period": "May 2017 – July 2025",
                 "position": "Chief Operating Officer",
                 "description": "Led comprehensive operational and strategic development initiatives that transformed the company into a top player in the sports technology market, with products used daily by athletes around the world."
+            },
+            {
+                "company": "AUTORI",
+                "period": "2014 – 2017",
+                "position": "Owner",
+                "description": "Implementation of websites and webshops for small to medium-sized businesses."
             },
             {
                 "company": "tbz Magdeburg",
@@ -56,7 +62,7 @@
                 "name": "Kickstarter Campaign",
                 "period": "2018",
                 "link": "Link",
-                "description": "Planning, design, and implementation of a successfully funded Kickstarter campaign as a growth hack for an early-stage startup."
+                "description": "Complete ownership from initial concept to successful execution of a funded Kickstarter campaign: strategy, design, video production, press outreach, and all operational aspects as a growth hack for an early-stage startup."
             },
             {
                 "name": "Agoria - the digital marketplace for agricultural supplies",

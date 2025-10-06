@@ -9,7 +9,10 @@
       "WebFetch(domain:tailwindcss.com)",
       "Bash(timeout 5 npm run serve)",
       "Bash(grep:*)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "Bash(npm outdated)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm install:*)"
     ],
     "deny": [],
     "ask": []

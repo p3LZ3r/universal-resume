@@ -1,29 +1,28 @@
 {
-  "name": "universal-resume-template",
-  "version": "3.1.1",
-  "description": "Minimal and formal résumé (CV) website template for print, mobile, and desktop. https://bit.ly/ur_demo",
-  "homepage": "https://github.com/WebPraktikos/universal-resume",
+  "name": "torsten-linnecke-resume",
+  "version": "1.0.0",
+  "description": "Minimal and formal résumé (CV) website for print, mobile, and desktop.",
+  "homepage": "https://github.com/p3LZ3r/universal-resume",
   "repository": {
     "type": "git",
-    "url": "https://github.com/WebPraktikos/universal-resume.git"
+    "url": "https://github.com/p3LZ3r/universal-resume.git"
   },
   "bugs": {
-    "url": "https://github.com/WebPraktikos/universal-resume/issues"
+    "url": "https://github.com/p3LZ3r/universal-resume/issues"
   },
   "license": "NonCommercial-ShareAlike 1.0 Generic",
-  "author": "WebPraktikos <hi@webpraktikos.com>",
+  "author": "Torsten Linnecke <tlinnecke@gmail.com>",
   "scripts": {
     "serve": "concurrently \"postcss ./tailwind.css -o docs/build.css --watch\"  \"live-server ./docs \"",
     "build": "cross-env NODE_ENV=build postcss ./tailwind.css -o ./docs/build.css"
   },
   "dependencies": {
-    "@fullhuman/postcss-purgecss": "^2.0.6",
-    "@tailwindcss/postcss": "^4.1.0",
-    "concurrently": "^5.1.0",
-    "cross-env": "^7.0.0",
-    "cssnano": "^7.0.0",
-    "live-server": "^1.2.1",
-    "postcss-cli": "^8.0.0",
-    "tailwindcss": "^4.1.0"
+    "@tailwindcss/postcss": "^4.1.14",
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0",
+    "cssnano": "^7.1.1",
+    "live-server": "^1.2.2",
+    "postcss-cli": "^11.0.1",
+    "tailwindcss": "^4.1.14"
   }
 }

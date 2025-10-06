@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de" data-i18n-title="meta.title">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -128,16 +128,25 @@
 
         <!-- Center: Freelance Pill Tag -->
         <div class="flex items-center justify-self-center print:hidden">
-          <a title="Verfügbar" aria-label="Verfügbar für freiberufliche Arbeit - Kontakt per E-Mail"
-            data-cal-link="tlinnecke/45min" data-cal-namespace="45min" data-cal-config='{"layout":"month_view"}'
+          <a aria-label="Verfügbar für freiberufliche Arbeit - Kontakt per E-Mail" data-cal-link="tlinnecke/45min"
+            data-cal-namespace="45min" data-cal-config='{"layout":"month_view"}'
             class="inline-flex leading-none items-center px-3 py-1.5 bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-200 text-sm font-medium rounded-full cursor-pointer hover:bg-stone-300 dark:hover:bg-stone-600 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-500">
             <span class="mr-1.5 text-green-500 animate-pulse" aria-hidden="true">●</span>
             Verfügbar
           </a>
         </div>
 
-        <!-- Right: Language Switcher & Dark Mode Toggle -->
+        <!-- Right: Print Button, Language Switcher & Dark Mode Toggle -->
         <div class="flex items-center justify-self-end gap-3 print:hidden">
+          <!-- Print Button -->
+          <button type="button" onclick="window.print()" aria-label="Seite drucken"
+            class="inline-flex items-center justify-center px-2.5 h-6 w-12 bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-200 rounded-full cursor-pointer hover:bg-stone-300 dark:hover:bg-stone-600 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-500">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M6.72 13.829c-.24.03-.48.062-.72.096m.72-.096a42.415 42.415 0 0 1 10.56 0m-10.56 0L6.34 18m10.94-4.171c.24.03.48.062.72.096m-.72-.096L17.66 18m0 0 .229 2.523a1.125 1.125 0 0 1-1.12 1.227H7.231c-.662 0-1.18-.568-1.12-1.227L6.34 18m11.318 0h1.091A2.25 2.25 0 0 0 21 15.75V9.456c0-1.081-.768-2.015-1.837-2.175a48.055 48.055 0 0 0-1.913-.247M6.34 18H5.25A2.25 2.25 0 0 1 3 15.75V9.456c0-1.081.768-2.015 1.837-2.175a48.041 48.041 0 0 1 1.913-.247m10.5 0a48.536 48.536 0 0 0-10.5 0m10.5 0V3.375c0-.621-.504-1.125-1.125-1.125h-8.25c-.621 0-1.125.504-1.125 1.125v3.659M18 10.5h.008v.008H18V10.5Zm-3 0h.008v.008H15V10.5Z" />
+            </svg>
+          </button>
           <!-- Language Switcher -->
           <div id="language-switcher" class="flex"></div>
           <!-- Dark Mode Toggle -->
@@ -165,7 +174,9 @@
                   data-i18n="about.company">
                   Design/Code
                 </h3>
-                <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
+                <p class="leading-normal text-md text-stone-650 dark:text-stone-400" data-i18n="about.period">
+                  Seit 2017
+                </p>
               </header>
               <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal" data-i18n="about.description">
                 Gestaltung und Umsetzung digitaler Markenauftritte, die Konvertieren, für lokale und nationale
@@ -210,15 +221,32 @@
               <header>
                 <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
                   data-i18n="experience.positions.1.company">
-                  tbz Magdeburg
+                  AUTORI
                 </h3>
                 <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
-                  <span data-i18n="experience.positions.1.period">Okt. 2013 – Mai 2014</span> | <span
-                    data-i18n="experience.positions.1.position">Werksstudent Prozessoptimierung</span>
+                  <span data-i18n="experience.positions.1.period">2014 – 2017</span> | <span
+                    data-i18n="experience.positions.1.position">Inhaber</span>
                 </p>
               </header>
               <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
                 data-i18n="experience.positions.1.description">
+                Umsetzung von Websites und Webshops für kleine bis mittelständische Unternehmen.
+              </p>
+            </section>
+
+            <section class="mb-4.5 break-inside-avoid">
+              <header>
+                <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
+                  data-i18n="experience.positions.2.company">
+                  tbz Magdeburg
+                </h3>
+                <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
+                  <span data-i18n="experience.positions.2.period">Okt. 2013 – Mai 2014</span> | <span
+                    data-i18n="experience.positions.2.position">Werksstudent Prozessoptimierung</span>
+                </p>
+              </header>
+              <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
+                data-i18n="experience.positions.2.description">
                 Optimierung der Prozessketten in der Einzel- und Auftragsfertigung mittels Einführung eines ERP-Systems.
               </p>
             </section>
@@ -306,6 +334,8 @@
               </header>
               <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
                 data-i18n="projects.items.0.description">
+                Komplette Verantwortung von der initialen Idee bis zur erfolgreichen Umsetzung einer finanzierten Kickstarter-Kampagne: Konzeption, Gestaltung, Videoproduktion, Pressearbeit und sämtliche operative Aspekte als Growth Hack für ein Early-Stage-Startup.
+              </p>
             </section>
 
             <section class="mb-4.5 break-inside-avoid">
@@ -360,37 +390,37 @@
               <div class="my-3.2 last:pb-1.5">
                 <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
                   <li
-                    class="px-2.5 mr-1.6 mb-1.6 rounded-full text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                    class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.0">
                     Strategic Planning & Execution
                   </li>
                   <li
-                    class="px-2.5 mr-1.6 mb-1.6 rounded-full text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                    class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.1">
                     Supply Chain Management
                   </li>
                   <li
-                    class="px-2.5 mr-1.6 mb-1.6 rounded-full text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                    class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.2">
                     Full-Stack Business Development
                   </li>
                   <li
-                    class="px-2.5 mr-1.6 mb-1.6 rounded-full text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                    class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.3">
                     International Logistics & Expansion
                   </li>
                   <li
-                    class="px-2.5 mr-1.6 mb-1.6 rounded-full text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                    class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.4">
                     Cross-Functional Team Leadership
                   </li>
                   <li
-                    class="px-2.5 mr-1.6 mb-1.6 rounded-full text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                    class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.5">
                     DevOps & Technical Operations
                   </li>
                   <li
-                    class="px-2.5 mr-1.6 mb-1.6 rounded-full text-base text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                    class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                     data-i18n="qualifications.skills.0.tags.6">
                     Customer Relations & Key Account Management
                   </li>
@@ -410,32 +440,32 @@
             <div class="my-3.2 last:pb-1.5">
               <ul class="flex flex-wrap text-md leading-relaxed -mr-1.6 -mb-1.6">
                 <li
-                  class="px-2.5 mr-1.6 mb-1.6 text-base rounded-full text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                  class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                   data-i18n="qualifications.skills.1.tags.0">
                   UX/UI Design
                 </li>
                 <li
-                  class="px-2.5 mr-1.6 mb-1.6 text-base rounded-full text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                  class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                   data-i18n="qualifications.skills.1.tags.1">
                   Digital Marketing
                 </li>
                 <li
-                  class="px-2.5 mr-1.6 mb-1.6 text-base rounded-full text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                  class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                   data-i18n="qualifications.skills.1.tags.2">
                   Design Engineering
                 </li>
                 <li
-                  class="px-2.5 mr-1.6 mb-1.6 text-base rounded-full text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                  class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                   data-i18n="qualifications.skills.1.tags.3">
                   Accounting
                 </li>
                 <li
-                  class="px-2.5 mr-1.6 mb-1.6 text-base rounded-full text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                  class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                   data-i18n="qualifications.skills.1.tags.4">
                   German
                 </li>
                 <li
-                  class="px-2.5 mr-1.6 mb-1.6 text-base rounded-full text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
+                  class="px-2.5 py-1 inline-flex items-center mr-1.6 mb-1.6 rounded-full text-sm text-stone-750 dark:text-stone-200 print:bg-white print:border-inset bg-stone-200 dark:bg-stone-700"
                   data-i18n="qualifications.skills.1.tags.5">
                   English
                 </li>
@@ -510,70 +540,64 @@
 
         const isDark = htmlElement.classList.contains('dark');
 
-        // Create toggle switch container
-        const toggleButton = document.createElement('button');
-        toggleButton.setAttribute('type', 'button');
-        toggleButton.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
-        toggleButton.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        // Create outer container (track)
+        const track = document.createElement('div');
+        track.className = 'relative inline-flex bg-stone-200 dark:bg-stone-700 rounded-full p-0.5 h-6';
 
-        // Toggle switch background classes
-        const backgroundClasses = [
-          'relative', 'inline-flex', 'items-center', 'h-6', 'w-11',
-          'flex-shrink-0', 'cursor-pointer', 'rounded-full', 'border-2', 'border-transparent',
-          'transition-colors', 'ease-in-out', 'duration-200',
-          'focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-stone-500'
-        ];
+        // Create sliding pill background
+        const slider = document.createElement('div');
+        slider.className = 'absolute top-0.5 bottom-0.5 bg-stone-400 dark:bg-stone-600 rounded-full transition-all duration-300 ease-in-out';
+        slider.style.width = 'calc(50% - 4px)';
+        slider.style.left = isDark ? 'calc(50% + 2px)' : '2px';
+        track.appendChild(slider);
 
-        // Background color based on state
-        const backgroundStateClasses = isDark
-          ? ['bg-stone-700', 'dark:bg-stone-600']
-          : ['bg-stone-200', 'dark:bg-stone-700'];
+        // Create light mode button
+        const lightButton = document.createElement('button');
+        lightButton.setAttribute('type', 'button');
+        lightButton.setAttribute('aria-label', 'Switch to light mode');
+        lightButton.setAttribute('aria-pressed', !isDark ? 'true' : 'false');
+        lightButton.className = [
+          'relative', 'z-10', 'px-3', 'h-5', 'flex', 'items-center', 'justify-center',
+          'cursor-pointer', 'transition-colors', 'duration-200', 'ease-in-out',
+          'focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-stone-500', 'rounded-full',
+          !isDark ? 'text-stone-700 dark:text-stone-200' : 'text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200'
+        ].join(' ');
 
-        toggleButton.className = [...backgroundClasses, ...backgroundStateClasses].join(' ');
+        lightButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>';
 
-        // Create the sliding indicator
-        const indicator = document.createElement('span');
-        indicator.setAttribute('aria-hidden', 'true');
-
-        // Indicator base classes
-        const indicatorClasses = [
-          'pointer-events-none', 'inline-block', 'size-5', 'p-0.5', 'rounded-full',
-          'bg-white', 'dark:bg-black', 'shadow', 'transform', 'ring-0', 'transition', 'ease-in-out', 'duration-200',
-          'flex', 'items-center', 'justify-center'
-        ];
-
-        // Position based on state
-        const positionClasses = isDark ? ['translate-x-5'] : ['translate-x-0'];
-
-        indicator.className = [...indicatorClasses, ...positionClasses].join(' ');
-
-        // Add icon to indicator
-        const icon = document.createElement('div');
-        icon.className = 'size-4 text-stone-400 flex items-center justify-center';
-
-        // Choose icon based on state
-        icon.innerHTML = isDark
-          ? '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>'
-          : '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>';
-
-        indicator.appendChild(icon);
-        toggleButton.appendChild(indicator);
-
-        // Add click event
-        toggleButton.addEventListener('click', () => {
-          const wasLight = !htmlElement.classList.contains('dark');
-
-          if (wasLight) {
-            htmlElement.classList.add('dark');
-          } else {
+        lightButton.addEventListener('click', () => {
+          if (htmlElement.classList.contains('dark')) {
+            slider.style.left = '2px';
             htmlElement.classList.remove('dark');
+            createDarkModeToggle();
           }
-
-          // Recreate toggle to update state
-          createDarkModeToggle();
         });
 
-        darkModeToggleContainer.appendChild(toggleButton);
+        // Create dark mode button
+        const darkButton = document.createElement('button');
+        darkButton.setAttribute('type', 'button');
+        darkButton.setAttribute('aria-label', 'Switch to dark mode');
+        darkButton.setAttribute('aria-pressed', isDark ? 'true' : 'false');
+        darkButton.className = [
+          'relative', 'z-10', 'px-3', 'h-5', 'flex', 'items-center', 'justify-center',
+          'cursor-pointer', 'transition-colors', 'duration-200', 'ease-in-out',
+          'focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-stone-500', 'rounded-full',
+          isDark ? 'text-stone-700 dark:text-stone-200' : 'text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200'
+        ].join(' ');
+
+        darkButton.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>';
+
+        darkButton.addEventListener('click', () => {
+          if (!htmlElement.classList.contains('dark')) {
+            slider.style.left = 'calc(50% + 2px)';
+            htmlElement.classList.add('dark');
+            createDarkModeToggle();
+          }
+        });
+
+        track.appendChild(lightButton);
+        track.appendChild(darkButton);
+        darkModeToggleContainer.appendChild(track);
       }
 
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');

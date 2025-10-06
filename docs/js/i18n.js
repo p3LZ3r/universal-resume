@@ -282,6 +282,18 @@
         // Clear existing content
         container.innerHTML = '';
 
+        // Create outer container (track)
+        const track = document.createElement('div');
+        track.className = 'relative inline-flex bg-stone-200 dark:bg-stone-700 rounded-full p-0.5 h-6';
+
+        // Create sliding pill background
+        const slider = document.createElement('div');
+        const activeIndex = CONFIG.supportedLangs.indexOf(currentLang);
+        slider.className = 'absolute top-0.5 bottom-0.5 bg-stone-400 dark:bg-stone-600 rounded-full transition-all duration-300 ease-in-out';
+        slider.style.width = `calc(${100 / CONFIG.supportedLangs.length}% - 4px)`;
+        slider.style.left = `calc(${activeIndex * (100 / CONFIG.supportedLangs.length)}% + 2px)`;
+        track.appendChild(slider);
+
         CONFIG.supportedLangs.forEach((lang, index) => {
             const button = document.createElement('button');
             button.textContent = lang.toUpperCase();
@@ -290,41 +302,27 @@
 
             const isActive = lang === currentLang;
 
-            // Base classes for all buttons
-            const baseClasses = [
-                'px-3', 'h-6', 'flex', 'items-center', 'text-sm', 'font-medium', 'cursor-pointer',
-                'transition-all', 'duration-200', 'ease-in-out',
-                'focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-stone-500'
-            ];
+            // Button classes with relative positioning to stay above slider
+            button.className = [
+                'relative', 'z-10', 'px-3', 'h-5', 'flex', 'items-center', 'justify-center',
+                'text-sm', 'font-medium', 'cursor-pointer',
+                'transition-colors', 'duration-200', 'ease-in-out',
+                'focus:outline-none', 'focus:ring-2', 'focus:ring-offset-2', 'focus:ring-stone-500', 'rounded-full',
+                isActive ? 'text-stone-700 dark:text-stone-200' : 'text-stone-500 dark:text-stone-400 hover:text-stone-700 dark:hover:text-stone-200'
+            ].join(' ');
 
-            // Conditional classes based on position
-            const positionClasses = [];
-            if (index === 0) {
-                positionClasses.push('rounded-l-full');
-            }
-            if (index === CONFIG.supportedLangs.length - 1) {
-                positionClasses.push('rounded-r-full');
-            }
-            if (CONFIG.supportedLangs.length === 1) {
-                positionClasses.push('rounded-full');
-            }
-
-            // Active/inactive state classes
-            const stateClasses = isActive
-                ? ['bg-stone-400', 'text-stone-700', 'dark:bg-stone-600', 'dark:text-stone-200']
-                : ['bg-stone-200', 'text-stone-700', 'hover:bg-stone-300', 'dark:bg-stone-700', 'dark:text-stone-200', 'dark:hover:bg-stone-600'];
-
-            // Combine all classes
-            const allClasses = [...baseClasses, ...positionClasses, ...stateClasses];
-            button.className = allClasses.join(' ');
             button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
 
             button.addEventListener('click', () => {
+                // Update slider position
+                slider.style.left = `calc(${index * (100 / CONFIG.supportedLangs.length)}% + 2px)`;
                 setLang(lang);
             });
 
-            container.appendChild(button);
+            track.appendChild(button);
         });
+
+        container.appendChild(track);
     }
 
     /**
