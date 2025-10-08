@@ -69,6 +69,12 @@
                 "period": "2016 – 2017",
                 "type": "AgTech Platform",
                 "description": "Gründung und Entwicklung eines digitalen Marktplatzes für landwirtschaftliche Produkte, der Landwirte mit Lieferanten durch innovative Technologielösungen verbindet."
+            },
+            {
+                "name": "EÜR Generator",
+                "period": "2025",
+                "link": "Link",
+                "description": "Open Source Tool zur automatischen Aufbereitung von Banktransaktionen für die Elster EUR-Anmeldung. Vereinfacht die Erstellung von Umsatzsteuervoranmeldungen durch strukturierte Datenaufbereitung."
             }
         ]
     },

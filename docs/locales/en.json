@@ -69,6 +69,12 @@
                 "period": "2016 – 2017",
                 "type": "AgTech Platform",
                 "description": "Founded and developed a digital marketplace for agricultural products that connects farmers with suppliers through innovative technology solutions."
+            },
+            {
+                "name": "EÜR Generator",
+                "period": "2025",
+                "link": "Link",
+                "description": "Open source tool for automatically processing bank transactions for Elster EUR tax declarations. Simplifies the creation of VAT advance notifications through structured data preparation."
             }
         ]
     },
