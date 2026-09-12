@@ -46,9 +46,25 @@ Starting Point
 
 `docs/index.html` is the main content file. By copying HTML: add pages, sections, subsections, and other parts.
 
-`npm run build` will make the **docs** directory ready for drag-n-drop to, for example, https://app.netlify.com/drop (free registration required beforehand).
+`npm run build` generates the optimized CSS in **docs/** (`docs/build.css`), which is the deployable directory.
 
-Also, with additionally running `git add docs/styles.css -f` and committing changes, it’s ready for push to GitHub and integration with GitHub Pages. GitHub Pages are free for  public repositories. Under your repository name, not profile, click “Settings” and enable GitHub Pages by navigating to: `Options → GitHub Pages → Source → /docs`.
+Tech Stack
+---------
+
+- **Tailwind CSS v4** via PostCSS (`@tailwindcss/postcss`), minified with cssnano for production builds
+- **Vite** for the development server (`npm run dev` / `npm run serve`) and static preview (`npm run preview`)
+- **Vanilla JS i18n** (`docs/js/i18n.js`) with locale files in `docs/locales/` (EN/DE)
+
+Important: text content exists in **two places** — the static HTML (default) and `docs/locales/*.json`. When changing content, update both, and keep the indexed `data-i18n="projects.items.N.*"` keys in sync with the array order in the locale files.
+
+Deployment
+---------
+
+Deployments run via GitHub Actions (`.github/workflows/build-and-deploy.yml`):
+
+1. On every push to `main`/`master` (HTML/JS/CSS/locale changes), the workflow rebuilds `docs/build.css`
+2. It refreshes `<lastmod>` in `docs/sitemap.xml` to the build date and commits both artifacts
+3. It triggers the hosting deployment through the `COOLIFY_WEBHOOK_URL` repository secret (optional)
 
 Tailwind CSS
 ---------
@@ -58,7 +74,7 @@ Tailwind CSS is a highly customizable, low-level CSS framework that gives you al
 Custom CSS
 ---------
 
-Code from `tailwind.config.js` and `tailwind.css` transpiles to `docs/style.css`.
+Code from `tailwind.css` transpiles to `docs/build.css`.
 
 Here is the default tailwind config: [defaultConfig.stub.js](https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js), and here’s the additional information from the Tailwind documentation: [theme](https://tailwindcss.com/docs/theme/#app).
 
@@ -103,6 +119,19 @@ Choose A4 or Letter size by navigating to **Properties → Advanced → Paper Si
 File → Print.
 
 By clicking on the **Page Setup** button, you are taken to the window with A4 and Letter options.
+
+Search Engine Indexing
+---------
+
+The site ships with: `robots.txt`, `sitemap.xml`, canonical URL, hreflang (EN/DE), Open Graph + Twitter cards, JSON-LD `Person` structured data, favicon set (`favicon.svg`, PNG icons, `site.webmanifest`), and a Google site verification meta tag.
+
+Checklist to keep the site indexed and findable:
+
+1. **Google Search Console** (https://search.google.com/search-console) — property is verified via the `google-site-verification` meta tag in `docs/index.html`. Submit `https://cv.torsten-linnecke.de/sitemap.xml` under *Sitemaps* and use *URL Inspection → Request indexing* after major content changes.
+2. **Bing Webmaster Tools** (https://www.bing.com/webmasters) — register, then paste the generated `msvalidate.01` meta tag into the `<head>` of `docs/index.html` (placeholder comment marks the spot). Bing also powers DuckDuckGo and Yahoo results.
+3. **Verify indexing** — search `site:cv.torsten-linnecke.de` in Google/Bing to confirm pages are in the index.
+4. **Keep `lastmod` fresh** — the deploy workflow updates it automatically; never set it back manually.
+5. **Backlinks** — link to the CV from LinkedIn, GitHub profile, and project sites (e.g. trailprint.net); crawlers discover and rank it faster that way.
 
 Blocking Search Engines
 ---------

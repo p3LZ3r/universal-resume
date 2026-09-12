@@ -9,6 +9,9 @@ on:
       - 'tailwind.css'
       - 'docs/**/*.html'
       - 'docs/**/*.js'
+      - 'docs/**/*.json'
+      - 'docs/sitemap.xml'
+      - 'docs/robots.txt'
       - 'postcss.config.js'
       - 'package.json'
   workflow_dispatch:
@@ -35,28 +38,27 @@ jobs:
       - name: Build CSS
         run: npm run build
 
-      - name: Check for changes
-        id: check_changes
+      - name: Update sitemap lastmod
         run: |
-          if git diff --quiet docs/build.css; then
-            echo "changes=false" >> $GITHUB_OUTPUT
-            echo "No changes detected in build.css"
-          else
-            echo "changes=true" >> $GITHUB_OUTPUT
-            echo "Changes detected in build.css"
-          fi
+          node -e "const fs=require('fs');const f='docs/sitemap.xml';const d=new Date().toISOString().slice(0,10);const s=fs.readFileSync(f,'utf8').replace(/<lastmod>[^<]*<\/lastmod>/g,'<lastmod>'+d+'</lastmod>');fs.writeFileSync(f,s);"
+          echo "sitemap lastmod set to $(date +%F)"
 
-      - name: Commit and push build.css
-        if: steps.check_changes.outputs.changes == 'true'
+      - name: Commit and push build artifacts
+        id: commit
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add docs/build.css
-          git commit -m "chore: update build.css [skip ci]"
-          git push
+          git add -f docs/build.css docs/sitemap.xml
+          if git diff --cached --quiet; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+            echo "No artifact changes to commit"
+          else
+            git commit -m "chore: update build artifacts [skip ci]"
+            git push
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
 
       - name: Trigger Coolify Deployment (Optional)
-        if: steps.check_changes.outputs.changes == 'true'
         continue-on-error: true
         run: |
           if [ -n "${{ secrets.COOLIFY_WEBHOOK_URL }}" ]; then

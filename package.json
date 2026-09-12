@@ -12,17 +12,22 @@
   },
   "license": "NonCommercial-ShareAlike 1.0 Generic",
   "author": "Torsten Linnecke <tlinnecke@gmail.com>",
-  "scripts": {
-    "serve": "concurrently \"postcss ./tailwind.css -o docs/build.css --watch\"  \"live-server ./docs \"",
-    "build": "cross-env NODE_ENV=build postcss ./tailwind.css -o ./docs/build.css"
+  "engines": {
+    "node": ">=20"
   },
-  "dependencies": {
+  "scripts": {
+    "dev": "concurrently \"postcss ./tailwind.css -o docs/build.css --watch\" \"vite docs\"",
+    "serve": "npm run dev",
+    "build": "cross-env NODE_ENV=build postcss ./tailwind.css -o ./docs/build.css",
+    "preview": "npm run build && vite preview --outDir docs"
+  },
+  "devDependencies": {
     "@tailwindcss/postcss": "^4.1.14",
     "concurrently": "^9.2.1",
     "cross-env": "^10.1.0",
     "cssnano": "^7.1.1",
-    "live-server": "^1.2.2",
     "postcss-cli": "^11.0.1",
-    "tailwindcss": "^4.1.14"
+    "tailwindcss": "^4.1.14",
+    "vite": "^7.1.5"
   }
 }
