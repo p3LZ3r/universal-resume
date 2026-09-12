@@ -13,7 +13,7 @@
   "license": "NonCommercial-ShareAlike 1.0 Generic",
   "author": "Torsten Linnecke <tlinnecke@gmail.com>",
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
   },
   "scripts": {
     "dev": "concurrently \"postcss ./tailwind.css -o docs/build.css --watch\" \"vite docs\"",
