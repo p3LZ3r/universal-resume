@@ -59,6 +59,12 @@
         "title": "PROJEKTE",
         "items": [
             {
+                "name": "TrailPrint",
+                "period": "Seit 2025",
+                "link": "Link",
+                "description": "Web-App, die Outdoor-Abenteuer in druckfertige Poster-Kunst verwandelt: Konzeption, Design und Full-Stack-Entwicklung – von der Idee bis zum Launch."
+            },
+            {
                 "name": "Kickstarter Kampagne",
                 "period": "2018",
                 "link": "Link",

@@ -59,6 +59,12 @@
         "title": "PROJECTS",
         "items": [
             {
+                "name": "TrailPrint",
+                "period": "Since 2025",
+                "link": "Link",
+                "description": "Web app that turns outdoor adventures into print-ready poster art: conception, design, and full-stack development — from idea to launch."
+            },
+            {
                 "name": "Kickstarter Campaign",
                 "period": "2018",
                 "link": "Link",

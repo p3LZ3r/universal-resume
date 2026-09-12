@@ -10,7 +10,20 @@
   <meta name="author" content="Torsten Linnecke" data-i18n-attr="content" data-i18n="meta.author">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="google-site-verification" content="X-m51wDDJ7nR52G-2BYj8dBhZzdDiXhZpESBmI1ijU0" />
+  <!-- Bing Webmaster Tools: register at https://www.bing.com/webmasters, then paste the generated
+       <meta name="msvalidate.01" content="YOUR_CODE" /> tag directly below this comment. -->
+
+  <!-- Theme color (light / dark) -->
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1c1917">
+
+  <!-- Favicon & web app manifest -->
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./images/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="./images/apple-touch-icon.png">
+  <link rel="manifest" href="./site.webmanifest">
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://cv.torsten-linnecke.de/">
@@ -68,7 +81,9 @@
     "url": "https://cv.torsten-linnecke.de/",
     "image": "https://cv.torsten-linnecke.de/images/headshot.png",
     "sameAs": [
-      "https://linkedin.com/in/torsten-linnecke"
+      "https://linkedin.com/in/torsten-linnecke",
+      "https://github.com/p3LZ3r",
+      "https://trailprint.net"
     ],
     "address": {
       "@type": "PostalAddress",
@@ -135,8 +150,8 @@
 
           <!-- Center: Freelance Pill Tag -->
           <div class="flex items-center print:hidden sm:ml-auto md:ml-0">
-            <a aria-label="Verfügbar für freiberufliche Arbeit - Kontakt per E-Mail" data-cal-link="tlinnecke/45min"
-              data-cal-namespace="45min" data-cal-config='{"layout":"month_view"}'
+            <a aria-label="Verfügbar für freiberufliche Arbeit - Kontakt per E-Mail" data-cal-link="tlinnecke/introductory-meeting"
+              data-cal-namespace="introductory-meeting" data-cal-config='{"layout":"month_view"}'
               class="inline-flex leading-none items-center px-3 py-1.5 bg-stone-200 dark:bg-stone-700 text-stone-700 dark:text-stone-200 text-sm font-medium rounded-full cursor-pointer hover:bg-stone-300 dark:hover:bg-stone-600 transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-stone-500">
               <span class="mr-1.5 text-green-500 animate-pulse" aria-hidden="true">●</span>
               Verfügbar
@@ -328,11 +343,10 @@
               <header>
                 <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
                   data-i18n="projects.items.0.name">
-                  Kickstarter Kampagne
+                  TrailPrint
                 </h3>
                 <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
-                  <span data-i18n="projects.items.0.period">2018</span> | <a
-                    href="//www.kickstarter.com/projects/629181264/vmaxpro-digitize-your-strength-training-like-the-p"
+                  <span data-i18n="projects.items.0.period">Since 2025</span> | <a href="https://trailprint.net/"
                     class="group">
                     <span data-i18n="projects.items.0.link">Link</span>
                     <span
@@ -342,6 +356,29 @@
               </header>
               <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
                 data-i18n="projects.items.0.description">
+                Web app that turns outdoor adventures into print-ready poster art: conception, design, and
+                full-stack development — from idea to launch.
+              </p>
+            </section>
+
+            <section class="mb-4.5 break-inside-avoid">
+              <header>
+                <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
+                  data-i18n="projects.items.1.name">
+                  Kickstarter Kampagne
+                </h3>
+                <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
+                  <span data-i18n="projects.items.1.period">2018</span> | <a
+                    href="//www.kickstarter.com/projects/629181264/vmaxpro-digitize-your-strength-training-like-the-p"
+                    class="group">
+                    <span data-i18n="projects.items.1.link">Link</span>
+                    <span
+                      class="inline-block text-stone-550 dark:text-stone-400 print:text-black font-normal group-hover:text-stone-700 dark:group-hover:text-stone-200 transition duration-100 ease-in">↗</span>
+                  </a>
+                </p>
+              </header>
+              <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
+                data-i18n="projects.items.1.description">
                 Komplette Verantwortung von der initialen Idee bis zur erfolgreichen Umsetzung einer finanzierten
                 Kickstarter-Kampagne: Konzeption, Gestaltung, Videoproduktion, Pressearbeit und sämtliche operative
                 Aspekte als Growth Hack für ein Early-Stage-Startup.
@@ -351,16 +388,16 @@
             <section class="mb-4.5 break-inside-avoid">
               <header>
                 <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
-                  data-i18n="projects.items.1.name">
+                  data-i18n="projects.items.2.name">
                   Agoria - the digital marketplace for agricultural inputs
                 </h3>
                 <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
-                  <span data-i18n="projects.items.1.period">2016 – 2017</span> | <span
-                    data-i18n="projects.items.1.type">AgTech Platform</span>
+                  <span data-i18n="projects.items.2.period">2016 – 2017</span> | <span
+                    data-i18n="projects.items.2.type">AgTech Platform</span>
                 </p>
               </header>
               <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
-                data-i18n="projects.items.1.description">
+                data-i18n="projects.items.2.description">
                 Establishment and development of a digital marketplace for agricultural products that connects farmers
                 with suppliers through innovative technology solutions.
               </p>
@@ -369,20 +406,20 @@
             <section class="mb-4.5 break-inside-avoid">
               <header>
                 <h3 class="text-lg font-semibold text-stone-700 dark:text-stone-200 leading-snugish"
-                  data-i18n="projects.items.2.name">
+                  data-i18n="projects.items.3.name">
                   EÜR Generator
                 </h3>
                 <p class="leading-normal text-md text-stone-650 dark:text-stone-400">
-                  <span data-i18n="projects.items.2.period">2024</span> | <a href="https://www.eür-generator.de/"
+                  <span data-i18n="projects.items.3.period">2024</span> | <a href="https://www.eür-generator.de/"
                     class="group">
-                    <span data-i18n="projects.items.2.link">Link</span>
+                    <span data-i18n="projects.items.3.link">Link</span>
                     <span
                       class="inline-block text-stone-550 dark:text-stone-400 print:text-black font-normal group-hover:text-stone-700 dark:group-hover:text-stone-200 transition duration-100 ease-in">↗</span>
                   </a>
                 </p>
               </header>
               <p class="mt-2.1 text-md text-stone-700 dark:text-stone-300 leading-normal"
-                data-i18n="projects.items.2.description">
+                data-i18n="projects.items.3.description">
                 Open source tool for the automatic preparation of bank transactions for the Elster EÜR declaration.
                 Simplifies the creation of advance VAT returns through structured data preparation.
               </p>
@@ -653,15 +690,15 @@
   <!-- Cal element-click embed code begins -->
   <script type="text/javascript">
     (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-    Cal("init", "45min", { origin: "https://app.cal.com" });
+    Cal("init", "introductory-meeting", { origin: "https://app.cal.com" });
 
 
     // Important: Please add the following attributes to the element that should trigger the calendar to open upon clicking.
-    // `data-cal-link="tlinnecke/45min"`
-    // data-cal-namespace="45min"
+    // `data-cal-link="tlinnecke/introductory-meeting"`
+    // data-cal-namespace="introductory-meeting"
     // `data-cal-config='{"layout":"month_view"}'`
 
-    Cal.ns["45min"]("ui", { "cssVarsPerTheme": { "light": { "cal-brand": "#1d2993" }, "dark": { "cal-brand": "#6973cd" } }, "hideEventTypeDetails": false, "layout": "month_view" });
+    Cal.ns["introductory-meeting"]("ui", { "cssVarsPerTheme": { "light": { "cal-brand": "#1d2993" }, "dark": { "cal-brand": "#6973cd" } }, "hideEventTypeDetails": false, "layout": "month_view" });
   </script>
   <!-- Cal element-click embed code ends -->
 </body>
