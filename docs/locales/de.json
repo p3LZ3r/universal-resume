@@ -79,8 +79,7 @@
             {
                 "name": "EÜR Generator",
                 "period": "2025",
-                "link": "Link",
-                "description": "Open Source Tool zur automatischen Aufbereitung von Banktransaktionen für die Elster EUR-Anmeldung. Vereinfacht die Erstellung von Umsatzsteuervoranmeldungen durch strukturierte Datenaufbereitung."
+                "link": "Link"
             }
         ]
     },
@@ -121,6 +120,11 @@
                 "type": "linkedin",
                 "label": "LinkedIn",
                 "url": "//linkedin.com/in/torsten-linnecke"
+            },
+            {
+                "type": "website",
+                "label": "torsten-linnecke.de",
+                "url": "https://www.torsten-linnecke.de"
             },
             {
                 "type": "location",
