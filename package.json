@@ -22,7 +22,7 @@
     "preview": "npm run build && vite preview --outDir docs"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.14",
+    "@tailwindcss/postcss": "^4.3.3",
     "concurrently": "^10.0.5",
     "cross-env": "^10.1.0",
     "cssnano": "^9.0.4",
